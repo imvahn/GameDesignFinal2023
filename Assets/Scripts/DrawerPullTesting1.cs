@@ -33,20 +33,20 @@ namespace SojaExiles
 		{
 			if (!open) //If closed, open it
             {
-				StartCoroutine(opening());
+				StartCoroutine(Opening());
             }
 			else //If open, close it
 			{
-				StartCoroutine(closing());
+				StartCoroutine(Closing());
 			}
 		}
 
 		public string GetDescription()
 		{
-			return "Click Me!";
+			return "Click";
 		}
 
-		IEnumerator opening()
+		IEnumerator Opening()
 		{
 			print("you are opening the door");
 			pull_01.Play("openpull_01");
@@ -54,7 +54,7 @@ namespace SojaExiles
 			yield return new WaitForSeconds(.5f);
 		}
 
-		IEnumerator closing()
+		IEnumerator Closing()
 		{
 			print("you are closing the door");
 			pull_01.Play("closepush_01");
