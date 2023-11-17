@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractorTesting : MonoBehaviour, IInteractable // Must add the IInteractable class
+public class CubeTesting : MonoBehaviour, IInteractable // Must add the IInteractable class
 {
 
     Material mat;

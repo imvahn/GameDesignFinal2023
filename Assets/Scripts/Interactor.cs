@@ -15,6 +15,7 @@ public class Interactor : MonoBehaviour
     public Transform InteractorSource; // Stores a reference to the transform from which the interacting ray will be casted
     public float interactRange; // Determines the length of the raycast
     private bool hitSomething; // Bool to determine if the raycast has hit something
+    public LayerMask layerMask; // Makes sure object is interactable
 
     public GameObject interactionUI; // UI
     public TextMeshProUGUI interactionText; // Text
@@ -23,7 +24,7 @@ public class Interactor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        layerMask = LayerMask.GetMask("Interactable");
     }
 
     // Update is called once per frame
@@ -38,7 +39,7 @@ public class Interactor : MonoBehaviour
 
         hitSomething = false;
 
-        if (Physics.Raycast(r, out RaycastHit hitInfo, interactRange)) // Check if raycast detects a collider
+        if (Physics.Raycast(r, out RaycastHit hitInfo, interactRange, layerMask)) // Check if raycast detects a collider
         {
             IInteractable interactable = hitInfo.collider.gameObject.GetComponent<IInteractable>(); // Use collision information to attempt an interaction with the object by attempting to get an instance of an interactable interface
             if (interactable != null)
