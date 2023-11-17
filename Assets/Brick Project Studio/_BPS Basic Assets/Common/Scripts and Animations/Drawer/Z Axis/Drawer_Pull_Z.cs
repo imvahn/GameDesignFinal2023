@@ -10,19 +10,30 @@ namespace SojaExiles
 
 		public Animator pull;
 		public bool open;
-		public Transform Player;
+		private Transform playerTransform;
 
 		void Start()
 		{
 			open = false;
+
+			// Find the player object by tag
+			GameObject player = GameObject.FindGameObjectWithTag("Player");
+			if (player != null)
+			{
+				playerTransform = player.transform;
+			}
+			else
+			{
+				Debug.LogError("Player not found. Make sure the player object is tagged as 'Player'.");
+			}
 		}
 
 		void OnMouseOver()
 		{
 			{
-				if (Player)
+				if (playerTransform)
 				{
-					float dist = Vector3.Distance(Player.position, transform.position);
+					float dist = Vector3.Distance(playerTransform.position, transform.position);
 					if (dist < 10)
 					{
 						print("object name");
