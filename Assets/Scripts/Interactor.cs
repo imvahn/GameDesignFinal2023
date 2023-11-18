@@ -24,7 +24,7 @@ public class Interactor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        layerMask = LayerMask.GetMask("Interactable");
+        layerMask = LayerMask.GetMask("Interactable") | LayerMask.GetMask("Walls");
     }
 
     // Update is called once per frame
