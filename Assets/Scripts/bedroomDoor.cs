@@ -5,17 +5,17 @@ using UnityEngine;
 namespace SojaExiles
 
 {
-
-	public class Drawer_Pull_X : MonoBehaviour, IInteractable
+	public class bedroomDoor : MonoBehaviour, IInteractable
 	{
 
-		public Animator pull_01;
+		public Animator openandclose;
 		public bool open;
 		public bool isLocked;
 
 		void Start()
 		{
 			open = false;
+			isLocked = true;
 		}
 
 		public void Interact()
@@ -48,7 +48,7 @@ namespace SojaExiles
 		IEnumerator Opening()
 		{
 			print("you are opening the door");
-			pull_01.Play("openpull_01");
+			openandclose.Play("Opening");
 			open = true;
 			yield return new WaitForSeconds(.5f);
 		}
@@ -56,7 +56,7 @@ namespace SojaExiles
 		IEnumerator Closing()
 		{
 			print("you are closing the door");
-			pull_01.Play("closepush_01");
+			openandclose.Play("Closing");
 			open = false;
 			yield return new WaitForSeconds(.5f);
 		}
