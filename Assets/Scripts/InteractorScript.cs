@@ -10,9 +10,9 @@ interface IInteractable
     string GetDescription();
 }
 
-public class Interactor : MonoBehaviour
+public class InteractorScript : MonoBehaviour
 {
-    public Transform InteractorSource; // Stores a reference to the transform from which the interacting ray will be casted
+    public Transform InteractorSource; // Stores a reference to the transform from which the interacting ray will be casted **MAKE THIS THE PLAYER CAMERA IN FIRST PERSON CONTROLLER**
     public float interactRange; // Determines the length of the raycast
     private bool hitSomething; // Bool to determine if the raycast has hit something
     public LayerMask layerMask; // Makes sure object is interactable
@@ -31,13 +31,11 @@ public class Interactor : MonoBehaviour
     void Update()
     {
         CastRay();
-
-        //Debug ray visualization
-        DebugRay();
     }
 
     private void CastRay()
     {
+
         Ray r = new Ray(InteractorSource.position, InteractorSource.forward); // Raycast created with position and direction of interactor source
 
         hitSomething = false;
@@ -56,15 +54,22 @@ public class Interactor : MonoBehaviour
             }
         }
 
+        // Debug ray visualization.
+        //DebugRay(r);
+
         interactionUI.SetActive(hitSomething); // Show interaction UI if player hits something
     }
 
-    private void DebugRay()
+    public Vector3 GetHitPoint()
     {
-        Ray r = new Ray(InteractorSource.position, InteractorSource.forward);
-        Debug.DrawRay(r.origin, r.direction * interactRange, Color.blue); // Draw debug ray from InteractorSource position in the forward direction
+        return hitInfo.point;
+    }
 
-        // Optionally, draw the hit point if something is hit by the raycast
+    private void DebugRay(Ray r)
+    {
+        Debug.DrawRay(r.origin, r.direction * interactRange, Color.blue); // Draw debug ray from InteractorSource position in the modified direction
+
+        // Draw the hit point if something is hit by the raycast
         if (hitSomething)
         {
             Debug.DrawRay(r.origin, r.direction * hitInfo.distance, Color.red);

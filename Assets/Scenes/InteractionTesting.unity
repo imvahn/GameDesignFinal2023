@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465788, g: 0.49641287, b: 0.5748173, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2222,9 +2222,9 @@ GameObject:
   - component: {fileID: 655207829}
   - component: {fileID: 655207828}
   - component: {fileID: 655207827}
-  - component: {fileID: 655207826}
   - component: {fileID: 655207825}
   - component: {fileID: 655207824}
+  - component: {fileID: 655207830}
   m_Layer: 6
   m_Name: Testing Cube (1)
   m_TagString: Untagged
@@ -2280,19 +2280,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &655207826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 655207823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd3cd020ce2129542a2c296c461388ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCamera: {fileID: 2032576811}
 --- !u!23 &655207827
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2358,6 +2345,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &655207830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 655207823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd3cd020ce2129542a2c296c461388ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHolding: 0
+  cameraTransform: {fileID: 2032576811}
+  pickupForce: 150
 --- !u!1 &656884503
 GameObject:
   m_ObjectHideFlags: 0
@@ -5866,11 +5868,6 @@ Transform:
   - {fileID: 533210977}
   m_Father: {fileID: 841781652}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1623843966 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
-  m_PrefabInstance: {fileID: 8765489994903951804}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1623843967 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
@@ -6977,7 +6974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2bed9d990ecc4abda097e9edc67d3c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractorSource: {fileID: 1623843966}
+  InteractorSource: {fileID: 2032576811}
   interactRange: 5
   layerMask:
     serializedVersion: 2
