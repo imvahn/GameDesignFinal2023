@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pickup : MonoBehaviour, IInteractable
 {
 
-    private bool isHolding;
+    private bool isHolding; 
     private Rigidbody rgb;
     public Transform playerCamera;
 
@@ -35,15 +35,15 @@ public class Pickup : MonoBehaviour, IInteractable
 
     public void PickUp()
     {
-        transform.SetParent(playerCamera);
-        rgb.isKinematic = true;
+        transform.SetParent(playerCamera); //attaches item to camera to carry around
+        rgb.isKinematic = true; //turns off physics of item
         isHolding = true;
     }
 
     public void PutDown()
     {
-        transform.parent = null;
-        rgb.isKinematic = false;
+        transform.parent = null; //removes item from camera
+        rgb.isKinematic = false; //turns on physics of item
         isHolding = false;
     }
 
