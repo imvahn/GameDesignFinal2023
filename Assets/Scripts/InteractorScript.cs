@@ -60,11 +60,6 @@ public class InteractorScript : MonoBehaviour
         interactionUI.SetActive(hitSomething); // Show interaction UI if player hits something
     }
 
-    public Vector3 GetHitPoint()
-    {
-        return hitInfo.point;
-    }
-
     private void DebugRay(Ray r)
     {
         Debug.DrawRay(r.origin, r.direction * interactRange, Color.blue); // Draw debug ray from InteractorSource position in the modified direction

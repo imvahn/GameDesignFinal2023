@@ -2,82 +2,86 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pickup : MonoBehaviour, IInteractable
+public class Pickup : MonoBehaviour
 {
+    [Header("Pickup Settings")]
+    [SerializeField] Transform holdArea;
+    [SerializeField] LayerMask layerMask;
+    private GameObject heldObj;
+    private Rigidbody heldObjRB;
+    private bool isHolding;
 
-    private Rigidbody rgb;
-    public bool isHolding;
-    [SerializeField] private Transform cameraTransform;
-    [SerializeField] private float pickupForce = 150.0f;
-
-    private InteractorScript interactor;
+    [Header("Physics Parameters")]
+    [SerializeField] private float pickupRange;
+    [SerializeField] private float pickupForce;
 
     void Start()
     {
+        pickupRange = 5.0f;
+        pickupForce = 150.0f;
+        heldObjRB = GetComponent<Rigidbody>();
         isHolding = false;
-        rgb = GetComponent<Rigidbody>();
-        interactor = GameObject.FindObjectOfType<InteractorScript>();
     }
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E)) {
+            if (heldObj == null)
+            {
+                RaycastHit hit;
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickupRange, layerMask))
+                {
+                    PickupObject(hit.transform.gameObject);
+                }
+            }
+            else
+            {
+                DropObject();
+            }
+        }
         if (isHolding)
         {
             MoveObject();
-        }
-    }
-
-    public void Interact()
-    {
-        if (!isHolding)
-        {
-            MoveObject();
-            PickUp();
-        }
-        else
-        {
-            PutDown();
-        }
-
-    }
-
-    public string GetDescription()
-    {
-        if (isHolding)
-        {
-            return "Put down";
-        }
-        else
-        {
-            return "Pick up";
         }
     }
 
     // Function to pick up the object
-    public void PickUp()
+    public void PickupObject(GameObject pickObj)
     {
-        rgb.useGravity = false;
-        rgb.drag = 10;
-        rgb.constraints = RigidbodyConstraints.FreezeRotation;
-        isHolding = true;
+        if (pickObj.GetComponent<Rigidbody>())
+        {
+            heldObjRB = pickObj.GetComponent<Rigidbody>();
+            heldObjRB.useGravity = false;
+            heldObjRB.drag = 10;
+            heldObjRB.constraints = RigidbodyConstraints.FreezeRotation;
+
+            heldObjRB.transform.parent = holdArea;
+            heldObj = pickObj;
+
+            isHolding = true;
+        }
     }
 
     // Function to put down the object
-    public void PutDown()
+    public void DropObject()
     {
-        rgb.useGravity = true;
-        rgb.drag = 1;
-        rgb.constraints = RigidbodyConstraints.None;
+        heldObjRB.useGravity = true;
+        heldObjRB.drag = 1;
+        heldObjRB.constraints = RigidbodyConstraints.None;
+
+        heldObj.transform.parent = null;
+        heldObj = null;
+
         isHolding = false;
     }
 
     // Function to move the object
     public void MoveObject()
     {
-        Vector3 hitPoint = interactor.GetHitPoint();
-        Vector3 directionToCamera = cameraTransform.position - hitPoint;
-        float distance = Vector3.Distance(hitPoint, cameraTransform.position); // Calculate distance between hit point and camera
-        Vector3 targetPosition = cameraTransform.position + directionToCamera.normalized * (distance - 5.0f); // Adjust pickupDistance as needed
-        transform.position = targetPosition;
+        if (Vector3.Distance(heldObj.transform.position, holdArea.position) > 0.1f)
+        {
+            Vector3 moveDirection = (holdArea.position - heldObj.transform.position);
+            heldObjRB.AddForce(moveDirection * pickupForce);
+        }
     }
 }
