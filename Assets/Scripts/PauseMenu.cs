@@ -5,12 +5,15 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
+    public GameObject crosshair;
     private bool isPaused = false;
+
+    public FirstPersonController playerMovement;
 
     void Start()
     {
-        // Initially hide the pause menu UI
-        pauseMenuUI.SetActive(false);
+        pauseMenuUI.SetActive(false); // Initially hide pause menu UI
+        Cursor.visible = false; // Make sure mouse cursor isn't visible
     }
 
     void Update()
@@ -31,16 +34,21 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
-        Time.timeScale = 0f; // Stop time to pause the game
+        playerMovement?.FreezeMovement(); // Freeze player movement
         isPaused = true;
         pauseMenuUI.SetActive(true); // Show the pause menu UI
+        crosshair.SetActive(false); // Hide the crosshair
+        Cursor.visible = true; // Make the cursor visible
+        Cursor.lockState = CursorLockMode.None; // Unlock cursor
     }
 
     public void ResumeGame()
     {
-        Time.timeScale = 1f; // Resume time to continue the game
+        playerMovement?.ResumeMovement(); // Resume player movement
         isPaused = false;
+        crosshair.SetActive(true); // Make the crosshair visible
         pauseMenuUI.SetActive(false); // Hide the pause menu UI
+        Cursor.visible = false; // Hide the cursor
     }
 
     public void QuitGame()
