@@ -6731,6 +6731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1352581808}
+  crosshair: {fileID: 2045290087}
   playerMovement: {fileID: 1427955510}
 --- !u!43 &2043328524
 Mesh:
@@ -6897,6 +6898,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &2045290087 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4459864851551516604, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+  m_PrefabInstance: {fileID: 8765489994903951804}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2087767194
 GameObject:
   m_ObjectHideFlags: 0

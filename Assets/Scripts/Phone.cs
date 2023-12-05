@@ -13,6 +13,7 @@ public class Phone : MonoBehaviour, IInteractable // Must add the IInteractable 
     private bool isTyping; // Bool to check if the typing coroutine is running to prevent the coroutine from being run again before it's finished
     private bool hasDisplayedOnce; // Bool to check if the texts have been read for the first time
     private bool isInteracting; // Flag to track if interaction is in progress
+    private bool isRunning; // Bool to check if the type coroutine is running (for the pause menu)
 
     public FirstPersonController playerMovement; // Reference to controller to freeze player movement while reading the texts. This is because the player needs to be looking
                                                  // at the object to start/end the interaction, and this was the easiest solution.
@@ -85,6 +86,7 @@ public class Phone : MonoBehaviour, IInteractable // Must add the IInteractable 
     IEnumerator TypeText()
     {
         isTyping = true;
+        isRunning = true;
         playerMovement?.FreezeMovement(); // Freeze player movement
 
         for (int i = 0; i < linesOfText.Length; i++)
@@ -98,8 +100,14 @@ public class Phone : MonoBehaviour, IInteractable // Must add the IInteractable 
 
         isInteracting = false;
         isTyping = false;
+        isRunning = false;
         yield return new WaitForSeconds(0.5f); // Delay before resetting flag
         hasDisplayedOnce = true; // Text has been displayed once
+    }
+
+    public bool IsTyping()
+    {
+        return isRunning;
     }
 
     // Display all text immediately

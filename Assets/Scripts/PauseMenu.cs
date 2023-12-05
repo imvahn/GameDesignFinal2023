@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     private bool isPaused = false;
 
     public FirstPersonController playerMovement;
+    public Phone phone; // Reference to phone script to see if the type coroutine is running
 
     void Start()
     {
@@ -21,13 +22,16 @@ public class PauseMenu : MonoBehaviour
         // Check for pause button input (e.g., "P" key)
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (isPaused)
+            if (!phone.IsTyping()) // Pause menu can only be activated if the text isn't typing.
             {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
+                if (isPaused)
+                {
+                    ResumeGame();
+                }
+                else
+                {
+                    PauseGame();
+                }
             }
         }
     }
