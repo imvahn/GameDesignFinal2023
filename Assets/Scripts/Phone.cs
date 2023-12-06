@@ -11,7 +11,7 @@ public class Phone : MonoBehaviour, IInteractable // Must add the IInteractable 
     public string[] linesOfText; // Array of text lines to display
 
     private bool isTyping; // Bool to check if the typing coroutine is running to prevent the coroutine from being run again before it's finished
-    private bool hasDisplayedOnce; // Bool to check if the texts have been read for the first time
+    public bool hasDisplayedOnce; // Bool to check if the texts have been read for the first time
     private bool isInteracting; // Flag to track if interaction is in progress
     private bool isRunning; // Bool to check if the type coroutine is running (for the pause menu)
 

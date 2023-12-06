@@ -11,6 +11,8 @@ namespace SojaExiles
 		public Animator openandclose;
 		public bool open;
 		public bool isLocked;
+		public TrashCan trashCan;
+		public Phone phone;
 
 		void Start()
 		{
@@ -18,7 +20,15 @@ namespace SojaExiles
 			isLocked = true;
 		}
 
-		public void Interact()
+        public void Update()
+        {
+            if (phone.hasDisplayedOnce && trashCan.trashIsFull)
+            {
+                isLocked = false;
+            }
+        }
+
+        public void Interact()
 		{
 			if (!isLocked) //If it isn't locked, open and close
 			{
