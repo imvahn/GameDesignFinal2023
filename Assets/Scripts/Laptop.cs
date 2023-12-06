@@ -15,6 +15,7 @@ public class Laptop : MonoBehaviour, IInteractable
     private bool isLoggedIn;
 
     public FirstPersonController playerMovement;
+    public GameObject Screen;
 
     void Start()
     {
@@ -39,6 +40,7 @@ public class Laptop : MonoBehaviour, IInteractable
         {
             isLoggedIn = true;
             email.SetActive(true);
+            //set screen to email
         }
         else
         {
@@ -60,6 +62,11 @@ public class Laptop : MonoBehaviour, IInteractable
                 if (isLoggedIn)
                 {
                     email.SetActive(true); //show email if already logged in
+                    //set screen to email
+                }
+                else
+                {
+                    //set screen to login
                 }
             }
             else //close laptop
