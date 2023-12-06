@@ -16342,7 +16342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2bed9d990ecc4abda097e9edc67d3c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InteractorSource: {fileID: 1195838043}
+  InteractorSource: {fileID: 941479217}
   interactRange: 5
   layerMask:
     serializedVersion: 2
@@ -21516,11 +21516,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192222000}
   m_Mesh: {fileID: 4300004, guid: 013043932069e224e90b516d38cdab48, type: 3}
---- !u!4 &1195838043 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
-  m_PrefabInstance: {fileID: 941479215}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1195838044 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4459864850019384740, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
