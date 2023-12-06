@@ -55,7 +55,7 @@ public class InteractorScript : MonoBehaviour
         }
 
         // Debug ray visualization.
-        //DebugRay(r);
+        DebugRay(r);
 
         interactionUI.SetActive(hitSomething); // Show interaction UI if player hits something
     }
