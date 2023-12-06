@@ -1329,13 +1329,13 @@ MonoBehaviour:
     value: 1
   spectralLut:
     overrideState: 1
-    value: {fileID: 2800000, guid: bba906a60a6f55441b3ab8088f837cf7, type: 3}
+    value: {fileID: 0}
     defaultState: 1
   intensity:
     overrideState: 1
-    value: 0.675
+    value: 0
   fastMode:
-    overrideState: 0
+    overrideState: 1
     value: 1
 --- !u!114 &-1115505506290174573
 MonoBehaviour:
@@ -1355,24 +1355,24 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 19
+    value: 1
   threshold:
     overrideState: 1
-    value: 1
+    value: 0
   softKnee:
     overrideState: 1
-    value: 0.434
+    value: 0.45
   clamp:
-    overrideState: 1
-    value: 3
+    overrideState: 0
+    value: 0
   diffusion:
     overrideState: 1
-    value: 4.97
+    value: 1
   anamorphicRatio:
     overrideState: 1
-    value: 0.28
+    value: -1
   color:
-    overrideState: 1
+    overrideState: 0
     value: {r: 1, g: 1, b: 1, a: 1}
   fastMode:
     overrideState: 1
@@ -1425,10 +1425,10 @@ MonoBehaviour:
     value: 7
   aperture:
     overrideState: 1
-    value: 11.8
+    value: 0.1
   focalLength:
     overrideState: 1
-    value: 73
+    value: 1
   kernelSize:
     overrideState: 1
     value: 3
@@ -1444,7 +1444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1cb7e9e120078f43bce4f0b1be547a7, type: 3}
   m_Name: AmbientOcclusion
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
@@ -1453,7 +1453,7 @@ MonoBehaviour:
     value: 0
   intensity:
     overrideState: 1
-    value: 1.83
+    value: 0.06
   color:
     overrideState: 0
     value: {r: 0, g: 0, b: 0, a: 1}
@@ -1502,10 +1502,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 1
+    value: 0
   size:
     overrideState: 1
-    value: 1.74
+    value: 0.3
   lumContrib:
     overrideState: 0
     value: 0.8
@@ -1527,7 +1527,7 @@ MonoBehaviour:
     value: 1
   shutterAngle:
     overrideState: 1
-    value: 3
+    value: 246
   sampleCount:
     overrideState: 1
-    value: 7
+    value: 8
