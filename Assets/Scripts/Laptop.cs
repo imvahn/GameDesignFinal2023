@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Laptop : MonoBehaviour, IInteractable
 {
 
     public GameObject laptopUI;
-    public GameObject inputField;
+    public TMP_InputField inputField;
+    public TMP_Text errorText;
+    public GameObject email;
 
-    private bool isInteracting;
     private bool isLoggedIn;
 
     public FirstPersonController playerMovement;
@@ -21,30 +23,26 @@ public class Laptop : MonoBehaviour, IInteractable
         if (laptopUI != null)
         {
             laptopUI.SetActive(false);
+            email.SetActive(false);
         }
     }
 
-    //void Update()
-    //{
-    //    if (laptopUI.activeSelf)
-    //    {
-    //        if (!isLoggedIn)
-    //        {
-    //            string password = inputField.GetComponent<TMP_InputField>().text;
-    //            if (password == "dgbcg")
-    //            {
-    //                isLoggedIn = true;
-    //            }
-    //        }
-    //    }
-    //}
+    public void Clear()
+    {
+        errorText.text = string.Empty;
+    }
 
     public void LogIn()
     {
-        string password = inputField.GetComponent<TMP_InputField>().text;
+        string password = inputField.text;
         if (password == "dgbcg")
         {
             isLoggedIn = true;
+            email.SetActive(true);
+        }
+        else
+        {
+            errorText.text = "Incorrect";
         }
     }
 
@@ -54,15 +52,21 @@ public class Laptop : MonoBehaviour, IInteractable
         {
             laptopUI.SetActive(!laptopUI.activeSelf);
 
-            if (laptopUI.activeSelf)
+            if (laptopUI.activeSelf) //open laptop
             {
-                playerMovement?.FreezeMovement();
+                playerMovement?.FreezeMovement(); //stop player movement
+                Cursor.visible = true; // Make the cursor visible
+                Cursor.lockState = CursorLockMode.None; // Unlock cursor
                 if (isLoggedIn)
                 {
-                    laptopUI.SetActive(false);
-                    //display email
-                    playerMovement?.ResumeMovement();
+                    email.SetActive(true); //show email if already logged in
                 }
+            }
+            else //close laptop
+            {
+                playerMovement?.ResumeMovement(); //resume player movement
+                Cursor.visible = false; //Make curse invisible
+                laptopUI.SetActive(false); //close laptop UI
             }
         }
     }
