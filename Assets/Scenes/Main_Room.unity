@@ -717,7 +717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8192f35a44301488ec0f072d9a16fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openandclose: {fileID: 0}
+  openandclose: {fileID: 34958595}
   open: 0
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
@@ -21221,7 +21221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e8192f35a44301488ec0f072d9a16fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  openandclose: {fileID: 0}
+  openandclose: {fileID: 1188539049}
   open: 0
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
