@@ -15,7 +15,9 @@ public class Laptop : MonoBehaviour, IInteractable
     private bool isLoggedIn;
 
     public FirstPersonController playerMovement;
-    public GameObject Screen;
+    public Screen screen;
+    public Material loginScreen;
+    public Material emailScreen;
 
     void Start()
     {
@@ -40,7 +42,7 @@ public class Laptop : MonoBehaviour, IInteractable
         {
             isLoggedIn = true;
             email.SetActive(true);
-            //set screen to email
+            screen.ChangeMaterial(emailScreen);
         }
         else
         {
@@ -63,18 +65,17 @@ public class Laptop : MonoBehaviour, IInteractable
                 Cursor.lockState = CursorLockMode.None; // Unlock cursor
                 if (isLoggedIn)
                 {
-                    email.SetActive(true); //show email if already logged in
-                    //set screen to email
+                    email.SetActive(true); //show email UI if already logged in
                 }
                 else
                 {
-                    //set screen to login
+                    screen.ChangeMaterial(loginScreen); //show login screen on computer model, login done through input UI
                 }
             }
             else //close laptop
             {
                 playerMovement?.ResumeMovement(); //resume player movement
-                Cursor.visible = false; //Make curse invisible
+                Cursor.visible = false; //Make cursor invisible
                 laptopUI.SetActive(false); //close laptop UI
             }
         }
