@@ -7,6 +7,8 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()
     {
+        GlobalVariables.isLooking = false;
+        GlobalVariables.isMoving = true;
         SceneManager.LoadSceneAsync(1);
     }
 

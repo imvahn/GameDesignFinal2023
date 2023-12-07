@@ -378,10 +378,12 @@ public class FirstPersonController : MonoBehaviour
             if (targetVelocity.x != 0 || targetVelocity.z != 0 && isGrounded)
             {
                 isWalking = true;
+                GlobalVariables.isMoving = true;
             }
             else
             {
                 isWalking = false;
+                GlobalVariables.isMoving = false;
             }
 
             // All movement calculations shile sprint is active

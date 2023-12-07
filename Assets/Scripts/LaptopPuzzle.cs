@@ -22,7 +22,8 @@ public class LaptopPuzzle : MonoBehaviour, IInteractable // Must add the IIntera
         if (manuscriptUI != null) // Check if the manuscriptUI is assigned
         {
             bool currentState = manuscriptUI.activeSelf; // Get the current state
-            manuscriptUI.SetActive(!currentState); // Toggle the state
+            manuscriptUI.SetActive(!currentState); // Toggle the state                             
+            GlobalVariables.isLooking = !currentState; // Set GlobalVariables.isLooking based on the manuscriptUI state
 
             if (!currentState) // If the UI was just activated
             {

@@ -52,7 +52,9 @@ public class Laptop : MonoBehaviour, IInteractable
     {
         if (laptopUI != null)
         {
-            laptopUI.SetActive(!laptopUI.activeSelf);
+            bool currentState = laptopUI.activeSelf; // Get the current state
+            laptopUI.SetActive(!currentState); // Toggle the current state
+            GlobalVariables.isLooking = !currentState; // Set isLooking based on laptopUI state
 
             if (laptopUI.activeSelf) //open laptop
             {

@@ -66,10 +66,12 @@ public class Phone : MonoBehaviour, IInteractable // Must add the IInteractable 
 
                 if (!hasDisplayedOnce) // If text has not been displayed yet, start typing
                 {
+                    GlobalVariables.isLooking = true;
                     StartCoroutine(TypeText());
                 }
                 else // If text has been displayed once, show all text immediately
                 {
+                    GlobalVariables.isLooking = true;
                     DisplayAllText();
                     isInteracting = false;
                 }
@@ -77,6 +79,7 @@ public class Phone : MonoBehaviour, IInteractable // Must add the IInteractable 
             else
             {
                 StopAllCoroutines();
+                GlobalVariables.isLooking = false;
                 playerMovement?.ResumeMovement(); // Resume player movement
                 isInteracting = false; // Reset flag when interaction finishes
             }
