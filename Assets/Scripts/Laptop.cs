@@ -15,7 +15,7 @@ public class Laptop : MonoBehaviour, IInteractable
     private bool isLoggedIn;
 
     public FirstPersonController playerMovement;
-    public Screen screen;
+    public DigitalScreen screen;
     public Material loginScreen;
     public Material emailScreen;
 
