@@ -21,32 +21,17 @@ public class TrashCan : MonoBehaviour
         // Iterate through all the colliders
         foreach (Collider collider in colliders)
         {
-            // Check if the collider has the specified tag
+            // Check if the collider is a bottle
             if (collider.CompareTag("Bottle"))
             {
                 // Increment the item count
                 itemCount++;
-                print(itemCount);
             }
         }
 
-        if (itemCount == 10)
+        if (itemCount == 6)
         {
             trashIsFull = true;
         }
     }
-
-/*    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Bottle"))
-        {
-            other.transform.SetParent(transform);
-        }
-    }
-
-    public int CountItemsInBin()
-    {
-        int itemCount = transform.childCount;
-        return itemCount;
-    }*/
 }
