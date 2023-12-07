@@ -14,8 +14,13 @@ namespace SojaExiles
 		public TrashCan trashCan;
 		public Phone phone;
 
+		public AudioClip openDoor;
+		public AudioClip closeDoor;
+		private AudioSource audioSource;
+
 		void Start()
 		{
+			audioSource = GetComponent<AudioSource>();
 			open = false;
 			isLocked = true;
 		}
@@ -57,6 +62,7 @@ namespace SojaExiles
 
 		IEnumerator Opening()
 		{
+			PlaySound(openDoor);
 			print("you are opening the door");
 			openandclose.Play("Opening");
 			open = true;
@@ -65,12 +71,20 @@ namespace SojaExiles
 
 		IEnumerator Closing()
 		{
+			PlaySound(closeDoor);
 			print("you are closing the door");
 			openandclose.Play("Closing");
 			open = false;
 			yield return new WaitForSeconds(.5f);
 		}
 
-
+		void PlaySound(AudioClip sound)
+        {
+			if (sound != null)
+            {
+				audioSource.clip = sound;
+				audioSource.Play();
+            }
+        }
 	}
 }
