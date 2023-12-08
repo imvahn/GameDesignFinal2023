@@ -43,9 +43,19 @@ public class InteractorScript : MonoBehaviour
         if (Physics.Raycast(r, out hitInfo, interactRange, layerMask)) // Check if raycast detects a collider
         {
             IInteractable interactable = hitInfo.collider.gameObject.GetComponent<IInteractable>(); // Use collision information to attempt an interaction with the object by attempting to get an instance of an interactable interface
+/*            if (hitInfo.collider.gameObject.GetComponent<TV>())
+            {
+                GlobalVariables.isLookingAtTV = true;
+            }
+            else
+            {
+                GlobalVariables.isLookingAtTV = false;
+            }*/
+
             if (interactable != null)
             {
                 hitSomething = true;
+
                 interactionText.text = interactable.GetDescription(); // Calls GetDescription function on given object
                 if (Input.GetKeyDown(KeyCode.E))
                 {
