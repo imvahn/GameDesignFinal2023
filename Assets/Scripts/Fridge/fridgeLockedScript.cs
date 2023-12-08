@@ -17,19 +17,13 @@ public class fridgeLockedScript : MonoBehaviour
     {
         
     }
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    print("Potato");
-    //    if (GlobalVariables.keyHeld) {
-    //        print("Potato1");
-    //        GlobalVariables.fridgeIsLocked = false;
-    //    }
-    //}
+
     private void OnTriggerEnter(Collider other)
     {
         
         if (other.CompareTag("Key")) {
             GlobalVariables.fridgeIsLocked = false;
+            print(GlobalVariables.fridgeIsLocked);
             Destroy(gameObject);
         }
 

@@ -21,13 +21,14 @@ namespace SojaExiles
 		{
 			open = false;
 			audioSource = GetComponent<AudioSource>();
+			
 		}
 
-		public void Interact()
+        public void Interact()
 		{
 			// if key hits collider -> open
-
-			if (!open && GlobalVariables.fridgeIsLocked == false) //If closed, open it
+			
+			if (open == false && GlobalVariables.fridgeIsLocked == false) //If closed, open it
 			{
 				StartCoroutine(Opening());
 			}
