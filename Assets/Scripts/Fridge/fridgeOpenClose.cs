@@ -1,16 +1,15 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace SojaExiles
 
 {
-	public class opencloseDoor : MonoBehaviour, IInteractable
+	public class fridgeOpenClose : MonoBehaviour, IInteractable
 	{
 
 		public Animator openandclose;
 		public bool open;
-		public bool fridgeIsLocked;
 		private Transform playerTransform;
 
 		public AudioClip openDoor;
@@ -28,7 +27,7 @@ namespace SojaExiles
 		{
 			// if key hits collider -> open
 
-			if (!open) //If closed, open it
+			if (!open && GlobalVariables.fridgeIsLocked == false) //If closed, open it
 			{
 				StartCoroutine(Opening());
 			}
