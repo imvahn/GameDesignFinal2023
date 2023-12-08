@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class fridgeLockedScript : MonoBehaviour
 {
-
+    public GameObject biglock;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +24,7 @@ public class fridgeLockedScript : MonoBehaviour
         if (other.CompareTag("Key")) {
             GlobalVariables.fridgeIsLocked = false;
             print(GlobalVariables.fridgeIsLocked);
+            Destroy(biglock);
             Destroy(gameObject);
         }
 
