@@ -16,6 +16,8 @@ namespace SojaExiles
 		public AudioClip closeDoor;
 		private AudioSource audioSource;
 
+		public bool isLocked;
+
 
 		void Start()
 		{
@@ -23,6 +25,11 @@ namespace SojaExiles
 			audioSource = GetComponent<AudioSource>();
 			
 		}
+
+		void Update()
+        {
+			isLocked = GlobalVariables.fridgeIsLocked;
+        }
 
         public void Interact()
 		{
