@@ -132,9 +132,9 @@ public class postProcessingEnable : MonoBehaviour
         m_Grain.size.value = Mathf.Sin(Time.realtimeSinceStartup);
     }
 
-    public void OnDestroy()
-    {
-        RuntimeUtilities.DestroyVolume(m_Volume, true, true);
-    }
+    //public void OnDestroy()
+    //{
+    //    RuntimeUtilities.DestroyVolume(m_Volume, true, true);
+    //}
 }
 
