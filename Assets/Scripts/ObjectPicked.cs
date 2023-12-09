@@ -12,6 +12,9 @@ public class ObjectPicked : MonoBehaviour, IInteractable
         rb = GetComponent<Rigidbody>();
     }
 
+    void Update() {
+    }
+
     public void Interact()
     {
 
@@ -25,6 +28,10 @@ public class ObjectPicked : MonoBehaviour, IInteractable
         }
         else
         {
+            if (GlobalVariables.remoteHeld == true)
+            {
+                return "Left Click TV";
+            }
             return "Put Down";
         }
     }

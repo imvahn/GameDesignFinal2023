@@ -4,17 +4,5 @@ using UnityEngine;
 
 public class Remote : MonoBehaviour
 {
-    public GameObject HoldArea;
-    
-    void Update()
-    {
-/*        if (GlobalVariables.isLookingAtTV && transform.parent == HoldArea)
-        {
-            gameObject.layer = LayerMask.NameToLayer("Default");
-        }
-        else
-        {
-            gameObject.layer = LayerMask.NameToLayer("Interactable");
-        }*/
-    }
+    // This script is here because I got errors when I tried gameObject.name or gameObject.CompareTag
 }

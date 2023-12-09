@@ -3,50 +3,28 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class TV : MonoBehaviour, IInteractable
+public class TV : MonoBehaviour
 {
 
     public GameObject HoldArea;
     public DigitalScreen Screen;
     public Material TVOn;
     public Material TVOff;
-    private bool TVisOn;
 
     void Start()
     {
-        TVisOn = false;
+        GlobalVariables.TVisOn = false;
     }
 
-    public void Interact()
+    void Update()
     {
-        if (HoldArea.GetComponentInChildren<Remote>())
+        if (GlobalVariables.TVisOn) // If TVisOn is true, turn the TV on.
         {
-            if (!TVisOn)
-            {
-                Screen.ChangeMaterial(TVOn);
-                TVisOn = true;
-            }
-            else
-            {
-                Screen.ChangeMaterial(TVOff);
-                TVisOn = false;
-            }
+            Screen.ChangeMaterial(TVOn);
         }
-    }
-   public string GetDescription()
-    {
-        if (HoldArea.GetComponentInChildren<Remote>())
+        else
         {
-            if (!TVisOn)
-            {
-                return "Turn On TV";
-            }
-            else
-            {
-                return "Turn Off TV";
-            }
+            Screen.ChangeMaterial(TVOff);
         }
-
-        return "Need Remote";
     }
 }
