@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465788, g: 0.49641287, b: 0.5748173, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3416,7 +3416,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1783350123702672231, guid: eb190b5ab7d05ee458c433eb3c281f64, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6943,9 +6944,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 420994606320152932, guid: fb1854f92aa8f7c43a266ece186f7c02, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2254686722722893114, guid: fb1854f92aa8f7c43a266ece186f7c02, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3065960406085863963, guid: fb1854f92aa8f7c43a266ece186f7c02, type: 3}
       propertyPath: m_Name
       value: TV_Apt_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3065960406085863963, guid: fb1854f92aa8f7c43a266ece186f7c02, type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3872169996947551664, guid: fb1854f92aa8f7c43a266ece186f7c02, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7716,6 +7729,9 @@ MonoBehaviour:
     m_Bits: 64
   pickupRange: 5
   pickupForce: 150
+  TVLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!43 &2043328524
 Mesh:
   m_ObjectHideFlags: 0

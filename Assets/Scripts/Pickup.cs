@@ -15,12 +15,16 @@ public class Pickup : MonoBehaviour
     [SerializeField] private float pickupRange;
     [SerializeField] private float pickupForce;
 
+    [Header("TV Settings")]
+    [SerializeField] LayerMask TVLayerMask;
+
     void Start()
     {
         pickupRange = 5.0f;
         pickupForce = 150.0f;
         heldObjRB = GetComponent<Rigidbody>();
         isHolding = false;
+        GlobalVariables.remoteHeld = false;
     }
 
     void Update()
@@ -82,6 +86,31 @@ public class Pickup : MonoBehaviour
         {
             Vector3 moveDirection = (holdArea.position - heldObj.transform.position);
             heldObjRB.AddForce(moveDirection * pickupForce);
+        }
+
+        // TV functionality
+        if (heldObj.name == "Remote")
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 5.0f, TVLayerMask))
+            {
+                GlobalVariables.remoteHeld = true;
+                if (Input.GetMouseButtonDown(0))
+                {
+                    if (GlobalVariables.TVisOn)
+                    {
+                        GlobalVariables.TVisOn = false;
+                    }
+                    else
+                    {
+                        GlobalVariables.TVisOn = true;
+                    }
+                }
+            }
+            else
+            {
+                GlobalVariables.remoteHeld = false;
+            }
         }
     }
 }
