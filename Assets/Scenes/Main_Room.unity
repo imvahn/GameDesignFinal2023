@@ -1813,7 +1813,6 @@ GameObject:
   - component: {fileID: 61886300}
   - component: {fileID: 61886299}
   - component: {fileID: 61886298}
-  - component: {fileID: 61886297}
   m_Layer: 6
   m_Name: ClosetDoor_Base
   m_TagString: Untagged
@@ -1837,22 +1836,6 @@ Transform:
   - {fileID: 1337812616}
   m_Father: {fileID: 1745753607}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &61886297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 61886295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 469e00e876fb40142af620db2b198643, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Closetopenandclose: {fileID: 0}
-  open: 0
-  openDoor: {fileID: 0}
-  closeDoor: {fileID: 0}
 --- !u!65 &61886298
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6099,7 +6082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7560524638376190048, guid: f78acb513b0627e49a4c83e4b736c58c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.089
+      value: 0.1107
       objectReference: {fileID: 0}
     - target: {fileID: 7560524638376190048, guid: f78acb513b0627e49a4c83e4b736c58c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6132,6 +6115,26 @@ PrefabInstance:
     - target: {fileID: 7560524638376190048, guid: f78acb513b0627e49a4c83e4b736c58c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881289162239966049, guid: f78acb513b0627e49a4c83e4b736c58c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.80302805
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881289162239966049, guid: f78acb513b0627e49a4c83e4b736c58c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.34546155
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881289162239966049, guid: f78acb513b0627e49a4c83e4b736c58c, type: 3}
+      propertyPath: m_Center.x
+      value: -0.14977169
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881289162239966049, guid: f78acb513b0627e49a4c83e4b736c58c, type: 3}
+      propertyPath: m_Center.y
+      value: 0.21098584
+      objectReference: {fileID: 0}
+    - target: {fileID: 8881289162239966049, guid: f78acb513b0627e49a4c83e4b736c58c, type: 3}
+      propertyPath: m_Center.z
+      value: -0.03201224
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9656,7 +9659,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9c017beb578bc4d05821ffd83db0def7, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -24693,7 +24696,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4b66f0c5f1c594a6e9d91b86f719108c, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -24789,7 +24792,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c52f0b0e644464ca0b066d80091a5c8f, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -41219,7 +41222,9 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7518554393326100017, guid: 4ca591c91b0af402ea8897c15774d6e4, type: 3}
+    - {fileID: 7518554394420543212, guid: 4ca591c91b0af402ea8897c15774d6e4, type: 3}
     m_RemovedGameObjects:
     - {fileID: 2952214564617189854, guid: 4ca591c91b0af402ea8897c15774d6e4, type: 3}
     m_AddedGameObjects: []
