@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class InspirationPills : MonoBehaviour, IInteractable
 {
-    
     public void Interact()
     {
-        postProcessingEnable.instance.TurnOnInspiration();
-        editTextColor.ChangeTextColor(Color.red);
+        //effects
     }
 
     public string GetDescription()
