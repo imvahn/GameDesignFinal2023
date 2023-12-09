@@ -8,6 +8,9 @@ using UnityEngine.Rendering.PostProcessing;
 
 public class postProcessingEnable : MonoBehaviour
 {
+
+    public static postProcessingEnable instance;
+
     PostProcessVolume m_Volume;
     Bloom m_Bloom;
     DepthOfField m_DepthoF;
@@ -22,13 +25,25 @@ public class postProcessingEnable : MonoBehaviour
     float amplitude = 100;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        turnOnInspiration();
+        
     }
 
+    public void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if (spooky)
         {
@@ -36,13 +51,12 @@ public class postProcessingEnable : MonoBehaviour
             temp = Mathf.Sin(Time.time) * amplitude;
             m_ColorGrading.tint.Override(tint);
             m_ColorGrading.temperature.Override(temp);
-            //print("temp: " + temp);
+            //print("temp: " + temp);\
             //print("tint: " + tint);
         }
     }
-    void turnOnInspiration()
+    public void TurnOnInspiration()
     {
-        
         turnOnBloom();
         turnOnDepth();
         turnOnChromaticAberration();
@@ -50,7 +64,7 @@ public class postProcessingEnable : MonoBehaviour
         turnOnColorGrading();
         turnOnGrain();
     }
-    void turnOnBloom()
+    public void turnOnBloom()
     {
         
         m_Bloom = ScriptableObject.CreateInstance<Bloom>();
@@ -65,7 +79,7 @@ public class postProcessingEnable : MonoBehaviour
         m_Bloom.fastMode.Override(true);
     }
 
-    void turnOnDepth()
+    public void turnOnDepth()
     {
         m_DepthoF = ScriptableObject.CreateInstance<DepthOfField>();
         m_DepthoF.enabled.Override(true);
@@ -77,7 +91,7 @@ public class postProcessingEnable : MonoBehaviour
 
     }
 
-    void turnOnChromaticAberration()
+    public void turnOnChromaticAberration()
     {
         m_ChromaticAberration = ScriptableObject.CreateInstance<ChromaticAberration>();
         m_ChromaticAberration.enabled.Override(true);
@@ -86,7 +100,7 @@ public class postProcessingEnable : MonoBehaviour
         m_ChromaticAberration.intensity.Override(1f);
     }
 
-    void turnOnMotionBlur()
+    public void turnOnMotionBlur()
     {
         m_MotionBlur = ScriptableObject.CreateInstance<MotionBlur>();
         m_MotionBlur.enabled.Override(true);
@@ -96,7 +110,7 @@ public class postProcessingEnable : MonoBehaviour
         m_MotionBlur.sampleCount.Override(10);
     }
 
-    void turnOnColorGrading()
+    public void turnOnColorGrading()
     {
         m_ColorGrading = ScriptableObject.CreateInstance<ColorGrading>();
         m_ColorGrading.enabled.Override(true);
@@ -106,7 +120,7 @@ public class postProcessingEnable : MonoBehaviour
         spooky = true;
     }
 
-    void turnOnGrain()
+    public void turnOnGrain()
     {
         m_Grain = ScriptableObject.CreateInstance<Grain>();
         m_Grain.enabled.Override(true);
@@ -118,7 +132,7 @@ public class postProcessingEnable : MonoBehaviour
         m_Grain.size.value = Mathf.Sin(Time.realtimeSinceStartup);
     }
 
-    void OnDestroy()
+    public void OnDestroy()
     {
         RuntimeUtilities.DestroyVolume(m_Volume, true, true);
     }
