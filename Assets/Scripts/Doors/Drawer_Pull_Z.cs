@@ -10,22 +10,15 @@ namespace SojaExiles
 
 		public Animator pull;
 		public bool open;
-		private Transform playerTransform;
+
+		public AudioClip openCabinet;
+		public AudioClip closeCabinet;
+		private AudioSource audioSource;
 
 		void Start()
 		{
 			open = false;
-
-			// Find the player object by tag
-			GameObject player = GameObject.FindGameObjectWithTag("Player");
-			if (player != null)
-			{
-				playerTransform = player.transform;
-			}
-			else
-			{
-				Debug.LogError("Player not found. Make sure the player object is tagged as 'Player'.");
-			}
+			audioSource = GetComponent<AudioSource>();
 		}
 
 		public void Interact()
@@ -42,7 +35,14 @@ namespace SojaExiles
 
 		public string GetDescription()
 		{
-			return "Click";
+			if (!open)
+            {
+				return "Open";
+            }
+            else
+            {
+				return "Close";
+            }
 		}
 
 		IEnumerator Opening()
@@ -61,6 +61,13 @@ namespace SojaExiles
 			yield return new WaitForSeconds(.5f);
 		}
 
-
+		void PlaySound(AudioClip sound)
+		{
+			if (sound != null)
+			{
+				audioSource.clip = sound;
+				audioSource.Play();
+			}
+		}
 	}
 }

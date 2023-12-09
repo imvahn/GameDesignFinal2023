@@ -9,7 +9,6 @@ namespace SojaExiles
 	{
 
 		public Animator openandclose;
-		private Transform playerTransform;
 
 		public bool open;
 		public bool isLocked = false;
@@ -47,7 +46,14 @@ namespace SojaExiles
 			}
 			else
 			{
-				return "Open";
+				if (!open)
+				{
+					return "Open";
+				}
+				else
+				{
+					return "Close";
+				}
 			}
 		}
 
