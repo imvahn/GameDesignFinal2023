@@ -5,4 +5,5 @@ public static class GlobalVariables
     public static bool fridgeIsLocked; // Variable to determine if the fridge is locked
     public static bool TVisOn; // Variable to determine if the TV is on
     public static bool remoteHeld; // Variable to determine if the remote is being held
+    public static bool isFrozen; // Variable to determine if player movement is frozen
 }

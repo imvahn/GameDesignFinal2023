@@ -537,6 +537,7 @@ public class FirstPersonController : MonoBehaviour
         enableHeadBob = false;
         enableJump = false;
         enableCrouch = false;
+        GlobalVariables.isFrozen = true;
     }
 
     // Method to resume player movement
@@ -547,6 +548,7 @@ public class FirstPersonController : MonoBehaviour
         enableHeadBob = true;
         enableJump = true;
         enableCrouch = true;
+        GlobalVariables.isFrozen = false;
     }
 }
 

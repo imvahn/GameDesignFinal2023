@@ -12,6 +12,8 @@ public class Footsteps : MonoBehaviour
 
     private AudioSource audioSource;
 
+    private FirstPersonController playerMovement;
+
     public float timeBetweenSteps = 0.65f; // Adjust this value to set the time between footsteps
     private float nextStepTime = 0f;
 
@@ -47,10 +49,13 @@ public class Footsteps : MonoBehaviour
 
     void PlayFootstepSound(AudioClip footstepSound)
     {
-        if (footstepSound != null)
+        if (!GlobalVariables.isFrozen)
         {
-            audioSource.clip = footstepSound;
-            audioSource.Play();
+            if (footstepSound != null)
+            {
+                audioSource.clip = footstepSound;
+                audioSource.Play();
+            }
         }
     }
 }

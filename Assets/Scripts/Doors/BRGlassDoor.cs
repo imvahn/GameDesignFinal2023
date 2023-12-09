@@ -49,6 +49,7 @@ namespace SojaExiles
 		{
 			print("you are opening");
 			openandclose.Play("BRGlassDoorOpen");
+			PlaySound(openDoor);
 			open = true;
 			yield return new WaitForSeconds(.5f);
 		}
@@ -57,6 +58,7 @@ namespace SojaExiles
 		{
 			print("you are closing");
 			openandclose.Play("BRGlassDoorClose");
+			PlaySound(closeDoor);
 			open = false;
 			yield return new WaitForSeconds(.5f);
 		}
