@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LaptopPuzzle : MonoBehaviour, IInteractable // Must add the IInteractable class
+public class ReadUI : MonoBehaviour, IInteractable // Must add the IInteractable class
 {
     public GameObject manuscriptUI; // Reference to the UI elements for the manuscript
     public FirstPersonController playerMovement; // Reference to controller to freeze player movement while reading the texts. This is because the player needs to be looking
@@ -38,6 +38,6 @@ public class LaptopPuzzle : MonoBehaviour, IInteractable // Must add the IIntera
 
     public string GetDescription()
     {
-        return "Read manuscript";
+        return "Read";
     }
 }
