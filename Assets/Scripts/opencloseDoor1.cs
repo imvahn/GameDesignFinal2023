@@ -9,8 +9,10 @@ namespace SojaExiles
 	{
 
 		public Animator openandclose1;
-		public bool open;
 		private Transform playerTransform;
+
+		public bool open;
+		public bool isLocked = false;
 
 		public AudioClip openDoor;
 		public AudioClip closeDoor;
@@ -24,19 +26,29 @@ namespace SojaExiles
 
 		public void Interact()
 		{
-			if (!open) //If closed, open it
+			if (!isLocked) //If it isn't locked, open and close
 			{
-				StartCoroutine(Opening());
-			}
-			else //If open, close it
-			{
-				StartCoroutine(Closing());
-			}
+				if (!open) //If closed, open it
+				{
+					StartCoroutine(Opening());
+				}
+				else //If open, close it
+				{
+					StartCoroutine(Closing());
+				}
+			}//If it is locked, do nothing
 		}
 
 		public string GetDescription()
 		{
-			return "Click";
+			if (isLocked)
+			{
+				return "You cannot open this right now.";
+			}
+			else
+			{
+				return "Open";
+			}
 		}
 
 		IEnumerator Opening()

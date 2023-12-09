@@ -9,40 +9,46 @@ namespace SojaExiles
 	{
 
 		public Animator Closetopenandclose;
-		public bool open;
 		private Transform playerTransform;
+
+		public bool open;
+		public bool isLocked = false;
+
+		public AudioClip openDoor;
+		public AudioClip closeDoor;
+		private AudioSource audioSource;
 
 		void Start()
 		{
 			open = false;
-
-			// Find the player object by tag
-			GameObject player = GameObject.FindGameObjectWithTag("Player");
-			if (player != null)
-			{
-				playerTransform = player.transform;
-			}
-			else
-			{
-				Debug.LogError("Player not found. Make sure the player object is tagged as 'Player'.");
-			}
+			audioSource = GetComponent<AudioSource>();
 		}
 
 		public void Interact()
 		{
-			if (!open) //If closed, open it
+			if (!isLocked) //If it isn't locked, open and close
 			{
-				StartCoroutine(Opening());
-			}
-			else //If open, close it
-			{
-				StartCoroutine(Closing());
-			}
+				if (!open) //If closed, open it
+				{
+					StartCoroutine(Opening());
+				}
+				else //If open, close it
+				{
+					StartCoroutine(Closing());
+				}
+			}//If it is locked, do nothing
 		}
 
 		public string GetDescription()
 		{
-			return "Click";
+			if (isLocked)
+			{
+				return "You cannot open this right now.";
+			}
+			else
+			{
+				return "Open";
+			}
 		}
 
 		IEnumerator Opening()
@@ -61,6 +67,13 @@ namespace SojaExiles
 			yield return new WaitForSeconds(.5f);
 		}
 
-
+		void PlaySound(AudioClip sound)
+		{
+			if (sound != null)
+			{
+				audioSource.clip = sound;
+				audioSource.Play();
+			}
+		}
 	}
 }
