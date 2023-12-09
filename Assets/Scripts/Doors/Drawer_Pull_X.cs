@@ -11,38 +11,39 @@ namespace SojaExiles
 
 		public Animator pull_01;
 		public bool open;
-		public bool isLocked;
+
+		public AudioClip openCabinet;
+		public AudioClip closeCabinet;
+		private AudioSource audioSource;
 
 		void Start()
 		{
 			open = false;
+			audioSource = GetComponent<AudioSource>();
 		}
 
 		public void Interact()
 		{
-			if (!isLocked) //If it isn't locked, open and close
+			if (!open) //If closed, open it
 			{
-				if (!open) //If closed, open it
-				{
-					StartCoroutine(Opening());
-				}
-				else //If open, close it
-				{
-					StartCoroutine(Closing());
-				}
-			}//If it is locked, do nothing
+				StartCoroutine(Opening());
+			}
+			else //If open, close it
+			{
+				StartCoroutine(Closing());
+			}
 		}
 
 		public string GetDescription()
 		{
-			if (isLocked)
-			{
-				return "You cannot open this right now.";
-			}
-			else
+			if (!open)
 			{
 				return "Open";
 			}
+            else
+            {
+				return "Close";
+            }
 		}
 
 		IEnumerator Opening()
@@ -61,6 +62,13 @@ namespace SojaExiles
 			yield return new WaitForSeconds(.5f);
 		}
 
-
+		void PlaySound(AudioClip sound)
+		{
+			if (sound != null)
+			{
+				audioSource.clip = sound;
+				audioSource.Play();
+			}
+		}
 	}
 }

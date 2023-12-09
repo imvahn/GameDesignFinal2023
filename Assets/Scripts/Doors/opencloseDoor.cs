@@ -48,7 +48,14 @@ namespace SojaExiles
 			}
 			else
 			{
-				return "Open";
+				if (!open)
+				{
+					return "Open";
+				}
+				else
+				{
+					return "Close";
+				}
 			}
 		}
 
