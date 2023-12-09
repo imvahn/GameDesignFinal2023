@@ -378,10 +378,12 @@ public class FirstPersonController : MonoBehaviour
             if (targetVelocity.x != 0 || targetVelocity.z != 0 && isGrounded)
             {
                 isWalking = true;
+                GlobalVariables.isMoving = true;
             }
             else
             {
                 isWalking = false;
+                GlobalVariables.isMoving = false;
             }
 
             // All movement calculations shile sprint is active
@@ -499,10 +501,10 @@ public class FirstPersonController : MonoBehaviour
 
     private void HeadBob()
     {
-        if(isWalking)
+        if (isWalking)
         {
             // Calculates HeadBob speed during sprint
-            if(isSprinting)
+            if (isSprinting)
             {
                 timer += Time.deltaTime * (bobSpeed + sprintSpeed);
             }
@@ -532,6 +534,7 @@ public class FirstPersonController : MonoBehaviour
     {
         cameraCanMove = false;
         playerCanMove = false;
+        enableHeadBob = false;
     }
 
     // Method to resume player movement
@@ -539,6 +542,7 @@ public class FirstPersonController : MonoBehaviour
     {
         cameraCanMove = true;
         playerCanMove = true;
+        enableHeadBob = true;
     }
 }
 

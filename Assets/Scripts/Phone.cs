@@ -10,9 +10,11 @@ public class Phone : MonoBehaviour, IInteractable // Must add the IInteractable 
     public TextMeshProUGUI textDisplay; // Reference to the Text component where text will be displayed
     public string[] linesOfText; // Array of text lines to display
 
+    public bool hasDisplayedOnce; // Bool to check if the texts have been read for the first time
+
     private bool isTyping; // Bool to check if the typing coroutine is running to prevent the coroutine from being run again before it's finished
-    private bool hasDisplayedOnce; // Bool to check if the texts have been read for the first time
     private bool isInteracting; // Flag to track if interaction is in progress
+    private bool isRunning; // Bool to check if the type coroutine is running (for the pause menu)
 
     public FirstPersonController playerMovement; // Reference to controller to freeze player movement while reading the texts. This is because the player needs to be looking
                                                  // at the object to start/end the interaction, and this was the easiest solution.
@@ -64,10 +66,12 @@ public class Phone : MonoBehaviour, IInteractable // Must add the IInteractable 
 
                 if (!hasDisplayedOnce) // If text has not been displayed yet, start typing
                 {
+                    GlobalVariables.isLooking = true;
                     StartCoroutine(TypeText());
                 }
                 else // If text has been displayed once, show all text immediately
                 {
+                    GlobalVariables.isLooking = true;
                     DisplayAllText();
                     isInteracting = false;
                 }
@@ -75,6 +79,7 @@ public class Phone : MonoBehaviour, IInteractable // Must add the IInteractable 
             else
             {
                 StopAllCoroutines();
+                GlobalVariables.isLooking = false;
                 playerMovement?.ResumeMovement(); // Resume player movement
                 isInteracting = false; // Reset flag when interaction finishes
             }
@@ -85,6 +90,7 @@ public class Phone : MonoBehaviour, IInteractable // Must add the IInteractable 
     IEnumerator TypeText()
     {
         isTyping = true;
+        isRunning = true;
         playerMovement?.FreezeMovement(); // Freeze player movement
 
         for (int i = 0; i < linesOfText.Length; i++)
@@ -98,8 +104,14 @@ public class Phone : MonoBehaviour, IInteractable // Must add the IInteractable 
 
         isInteracting = false;
         isTyping = false;
-        yield return new WaitForSeconds(0.5f); // Delay before resetting flag
+        isRunning = false;
         hasDisplayedOnce = true; // Text has been displayed once
+        yield return new WaitForSeconds(0.5f); // Delay before resetting flag
+    }
+
+    public bool IsTyping()
+    {
+        return isRunning;
     }
 
     // Display all text immediately

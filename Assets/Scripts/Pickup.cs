@@ -2,60 +2,86 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pickup : MonoBehaviour, IInteractable
+public class Pickup : MonoBehaviour
 {
-
+    [Header("Pickup Settings")]
+    [SerializeField] Transform holdArea;
+    [SerializeField] LayerMask layerMask;
+    private GameObject heldObj;
+    private Rigidbody heldObjRB;
     private bool isHolding;
-    private Rigidbody rgb;
-    public Transform playerCamera;
+
+    [Header("Physics Parameters")]
+    [SerializeField] private float pickupRange;
+    [SerializeField] private float pickupForce;
 
     void Start()
     {
+        pickupRange = 5.0f;
+        pickupForce = 150.0f;
+        heldObjRB = GetComponent<Rigidbody>();
         isHolding = false;
-        rgb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
-
-    }
-
-    public void Interact()
-    {
-        if (isHolding == true)
-        {
-            PutDown();
+        if (Input.GetKeyDown(KeyCode.E)) {
+            if (heldObj == null)
+            {
+                RaycastHit hit;
+                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickupRange, layerMask))
+                {
+                    PickupObject(hit.transform.gameObject);
+                }
+            }
+            else
+            {
+                DropObject();
+            }
         }
-        else
+        if (isHolding)
         {
-            PickUp();
+            MoveObject();
         }
-
     }
 
-    public void PickUp()
+    // Function to pick up the object
+    public void PickupObject(GameObject pickObj)
     {
-        transform.SetParent(playerCamera);
-        rgb.isKinematic = true;
-        isHolding = true;
+        if (pickObj.GetComponent<Rigidbody>())
+        {
+            heldObjRB = pickObj.GetComponent<Rigidbody>();
+            heldObjRB.useGravity = false;
+            heldObjRB.drag = 10;
+            heldObjRB.constraints = RigidbodyConstraints.FreezeRotation;
+
+            heldObjRB.transform.parent = holdArea;
+            heldObj = pickObj;
+
+            isHolding = true;
+        }
     }
 
-    public void PutDown()
+    // Function to put down the object
+    public void DropObject()
     {
-        transform.parent = null;
-        rgb.isKinematic = false;
+        heldObjRB.useGravity = true;
+        heldObjRB.drag = 1;
+        heldObjRB.constraints = RigidbodyConstraints.None;
+
+        heldObj.transform.parent = null;
+        heldObj = null;
+
         isHolding = false;
     }
 
-    public string GetDescription()
+    // Function to move the object
+    public void MoveObject()
     {
-        if (isHolding == true)
+        if (Vector3.Distance(heldObj.transform.position, holdArea.position) > 0.1f)
         {
-            return "Put down";
-        }
-        else
-        {
-            return "Pick up";
+            Vector3 moveDirection = (holdArea.position - heldObj.transform.position);
+            heldObjRB.AddForce(moveDirection * pickupForce);
         }
     }
 }
