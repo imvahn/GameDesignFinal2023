@@ -10,7 +10,6 @@ namespace SojaExiles
 
 		public Animator openandclose;
 		public bool open;
-		private Transform playerTransform;
 
 		public AudioClip openDoor;
 		public AudioClip closeDoor;
@@ -19,7 +18,7 @@ namespace SojaExiles
 		public bool isLocked;
 
 
-		void Start()
+        void Start()
 		{
 			open = false;
 			audioSource = GetComponent<AudioSource>();
@@ -34,20 +33,36 @@ namespace SojaExiles
         public void Interact()
 		{
 			// if key hits collider -> open
-			
-			if (open == false && GlobalVariables.fridgeIsLocked == false) //If closed, open it
-			{
-				StartCoroutine(Opening());
-			}
-			else //If open, close it
-			{
-				StartCoroutine(Closing());
+			if (GlobalVariables.fridgeIsLocked == false) // If fridge isn't locked
+            {
+				if (!open) //If closed, open it
+				{
+					StartCoroutine(Opening());
+				}
+				else //If open, close it
+				{
+					StartCoroutine(Closing());
+				}
 			}
 		}
 
 		public string GetDescription()
 		{
-			return "Click";
+			if (isLocked)
+			{
+				return "You cannot open this right now.";
+			}
+			else
+			{
+				if (!open)
+				{
+					return "Open";
+				}
+				else
+				{
+					return "Close";
+				}
+			}
 		}
 
 		IEnumerator Opening()
