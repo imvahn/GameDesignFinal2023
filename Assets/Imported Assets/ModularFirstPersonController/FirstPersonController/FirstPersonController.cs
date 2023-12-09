@@ -535,6 +535,8 @@ public class FirstPersonController : MonoBehaviour
         cameraCanMove = false;
         playerCanMove = false;
         enableHeadBob = false;
+        enableJump = false;
+        enableCrouch = false;
     }
 
     // Method to resume player movement
@@ -543,6 +545,8 @@ public class FirstPersonController : MonoBehaviour
         cameraCanMove = true;
         playerCanMove = true;
         enableHeadBob = true;
+        enableJump = true;
+        enableCrouch = true;
     }
 }
 
