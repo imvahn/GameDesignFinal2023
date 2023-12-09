@@ -32,7 +32,6 @@ public class postProcessingEnable : MonoBehaviour
     {
         if (spooky)
         {
-            
             tint = Mathf.Cos(Time.time) * amplitude;
             temp = Mathf.Sin(Time.time) * amplitude;
             m_ColorGrading.tint.Override(tint);
