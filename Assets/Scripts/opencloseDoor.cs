@@ -10,7 +10,6 @@ namespace SojaExiles
 
 		public Animator openandclose;
 		public bool open;
-		public bool fridgeIsLocked;
 		private Transform playerTransform;
 
 		public AudioClip openDoor;
