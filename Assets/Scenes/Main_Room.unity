@@ -11565,6 +11565,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 626284210}
+  - component: {fileID: 626284211}
   m_Layer: 0
   m_Name: TestingPP
   m_TagString: Untagged
@@ -11587,6 +11588,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &626284211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 626284209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f9c25a3147d644d482abf73605eb25f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &629835055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18175,7 +18188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sharedProfile: {fileID: 11400000, guid: 4d0ea3f53a7fe468f86f696de3eb832c, type: 2}
-  isGlobal: 0
+  isGlobal: 1
   blendDistance: 0
   weight: 1
   priority: 0
