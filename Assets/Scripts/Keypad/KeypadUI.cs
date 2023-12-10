@@ -8,13 +8,14 @@ using UnityEngine;
 public class KeypadUI : MonoBehaviour
 {
     string code = "1824";
-    string input = null;
+    string input = "";
     public TMP_Text output = null;
     public musicDoor musicRoomDoor;
 
     private void Start()
     {
         musicRoomDoor.isLocked = true;
+        output.text = "****";
     }
 
     public void TakeInput(string numbers)
@@ -36,5 +37,11 @@ public class KeypadUI : MonoBehaviour
             output.text = "Incorrect";
             input = null;
         }
+    }
+
+    public void Clear()
+    {
+        input = null;
+        output.text = "";
     }
 }
