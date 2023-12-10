@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44944346, g: 0.49640143, b: 0.558914, a: 1}
+  m_IndirectSpecularColor: {r: 0.44944328, g: 0.4964012, b: 0.5589136, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -721,6 +721,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 34958595}
   open: 0
+  isLocked: 0
   openDoor: {fileID: 8300000, guid: 4b66f0c5f1c594a6e9d91b86f719108c, type: 3}
   closeDoor: {fileID: 8300000, guid: c52f0b0e644464ca0b066d80091a5c8f, type: 3}
 --- !u!95 &34958595
@@ -1082,7 +1083,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: f1f65c7ba32514b21a7e4ef8ba83439a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1798,6 +1799,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Closetopenandclose: {fileID: 0}
   open: 0
+  openDoor: {fileID: 0}
+  closeDoor: {fileID: 0}
 --- !u!65 &61886298
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11484,7 +11487,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15010,6 +15013,9 @@ MonoBehaviour:
     m_Bits: 64
   pickupRange: 5
   pickupForce: 159
+  TVLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &906123273
 GameObject:
   m_ObjectHideFlags: 0
@@ -18867,6 +18873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 1188539049}
   open: 0
+  isLocked: 0
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!95 &1188539049
@@ -23942,6 +23949,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 0}
+  isGlobal: 0
+  blendDistance: 0
+  weight: 1
+  priority: 0
 --- !u!114 &1546467317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23954,6 +23966,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 0}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 0}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!81 &1546467318
 AudioListener:
   m_ObjectHideFlags: 0
@@ -27173,6 +27233,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Closetopenandclose: {fileID: 1745753608}
   open: 0
+  openDoor: {fileID: 0}
+  closeDoor: {fileID: 0}
 --- !u!65 &1745753610
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28597,6 +28659,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openandclose: {fileID: 0}
   open: 0
+  isLocked: 0
   openDoor: {fileID: 0}
   closeDoor: {fileID: 0}
 --- !u!95 &1844241224

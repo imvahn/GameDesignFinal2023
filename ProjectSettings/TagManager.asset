@@ -7,6 +7,8 @@ TagManager:
   - Bottle
   - Key
   - Remote
+  - wall
+  - door
   layers:
   - Default
   - TransparentFX

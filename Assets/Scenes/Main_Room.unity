@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44944346, g: 0.49640143, b: 0.558914, a: 1}
+  m_IndirectSpecularColor: {r: 0.44944328, g: 0.4964012, b: 0.5589136, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1034,7 +1034,7 @@ GameObject:
   - component: {fileID: 34958599}
   m_Layer: 6
   m_Name: Door.001 (1)
-  m_TagString: Untagged
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1423,7 +1423,7 @@ GameObject:
   - component: {fileID: 36440358}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (47)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1731,7 +1731,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2059,7 +2059,7 @@ GameObject:
   - component: {fileID: 58225871}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5096,6 +5096,54 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170051038}
   m_Mesh: {fileID: 4300012, guid: 8537129dc3fbbe44186add4eea186b85, type: 3}
+--- !u!1 &173498571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 173498572}
+  - component: {fileID: 173498573}
+  m_Layer: 0
+  m_Name: walldirty
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &173498572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173498571}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1195838048}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &173498573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173498571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e13ec04ebb22465e8dc769664aff57c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag1: wall
+  wallMaterial: {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
+  targetTag2: door
+  doorMaterial: {fileID: 2100000, guid: 3c6b0f958be0646a9b012433d7dd0c5c, type: 2}
 --- !u!1 &173499844
 GameObject:
   m_ObjectHideFlags: 0
@@ -5847,7 +5895,7 @@ GameObject:
   - component: {fileID: 218499674}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_02 (7)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5909,7 +5957,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5953,7 +6001,7 @@ GameObject:
   - component: {fileID: 221278536}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (29)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7240,7 +7288,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7394,7 +7442,7 @@ GameObject:
   - component: {fileID: 256454270}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (8)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9114,7 +9162,7 @@ GameObject:
   - component: {fileID: 335205430}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_02 (8)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9220,7 +9268,7 @@ GameObject:
   - component: {fileID: 342022397}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (40)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9281,7 +9329,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9330,7 +9378,7 @@ GameObject:
   - component: {fileID: 347572094}
   m_Layer: 7
   m_Name: Int_Apt_01_Wall_04
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9436,7 +9484,7 @@ GameObject:
   - component: {fileID: 351127693}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (5)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10290,7 +10338,7 @@ GameObject:
   - component: {fileID: 364346050}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (45)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10351,7 +10399,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10500,7 +10548,7 @@ GameObject:
   - component: {fileID: 368500181}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (23)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10770,7 +10818,7 @@ GameObject:
   - component: {fileID: 401114624}
   m_Layer: 7
   m_Name: BR Tiles
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11081,7 +11129,7 @@ GameObject:
   - component: {fileID: 415111662}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (33)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11485,7 +11533,7 @@ GameObject:
   - component: {fileID: 432924963}
   m_Layer: 7
   m_Name: Int_Apt_01_Wall_03 (5)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12641,7 +12689,7 @@ GameObject:
   - component: {fileID: 464507523}
   m_Layer: 7
   m_Name: Int_Apt_01_Wall_03 (7)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12746,7 +12794,7 @@ GameObject:
   - component: {fileID: 472182199}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (9)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12851,7 +12899,7 @@ GameObject:
   - component: {fileID: 472485849}
   m_Layer: 7
   m_Name: Int_WB_Pillar_4x4 (4)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12956,7 +13004,7 @@ GameObject:
   - component: {fileID: 473055331}
   m_Layer: 7
   m_Name: Int_WB_Pillar_4x4 (3)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13604,7 +13652,7 @@ GameObject:
   - component: {fileID: 496930220}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (12)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14133,7 +14181,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14177,7 +14225,7 @@ GameObject:
   - component: {fileID: 535954243}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (30)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15021,7 +15069,7 @@ GameObject:
   - component: {fileID: 548085020}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_02
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15294,7 +15342,7 @@ GameObject:
   - component: {fileID: 570305733}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (36)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15539,7 +15587,7 @@ GameObject:
   - component: {fileID: 592263848}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (22)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16178,7 +16226,7 @@ GameObject:
   - component: {fileID: 612753088}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17695,7 +17743,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17922,7 +17970,7 @@ GameObject:
   - component: {fileID: 696321991}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (21)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18088,7 +18136,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18289,7 +18337,7 @@ GameObject:
   - component: {fileID: 698849317}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_02 (4)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18434,7 +18482,7 @@ GameObject:
   - component: {fileID: 710468106}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_02 (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18616,7 +18664,7 @@ GameObject:
   - component: {fileID: 718386669}
   m_Layer: 7
   m_Name: Int_WB_Pillar_4x4 (6)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19093,7 +19141,7 @@ GameObject:
   - component: {fileID: 738106999}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19700,7 +19748,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19805,7 +19853,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -20001,7 +20049,7 @@ GameObject:
   - component: {fileID: 767645699}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_02 (6)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21161,7 +21209,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21205,7 +21253,7 @@ GameObject:
   - component: {fileID: 818894788}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (19)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21376,7 +21424,7 @@ GameObject:
   - component: {fileID: 823628260}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (3)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22110,7 +22158,7 @@ GameObject:
   - component: {fileID: 842283177}
   m_Layer: 7
   m_Name: Int_WB_Pillar_4x4
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23259,7 +23307,7 @@ GameObject:
   - component: {fileID: 897109291}
   m_Layer: 7
   m_Name: Int_Apt_01_Wall_04 (3)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23426,7 +23474,7 @@ GameObject:
   - component: {fileID: 906123275}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (31)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23769,7 +23817,7 @@ GameObject:
   - component: {fileID: 923509092}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (41)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23830,7 +23878,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24111,7 +24159,7 @@ GameObject:
   - component: {fileID: 926095454}
   m_Layer: 0
   m_Name: Music Room
-  m_TagString: Untagged
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24363,7 +24411,7 @@ GameObject:
   - component: {fileID: 938565007}
   m_Layer: 0
   m_Name: Entrance Door
-  m_TagString: Untagged
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24529,6 +24577,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 173498572}
     - targetCorrespondingSourceObject: {fileID: 4459864851310106429, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       insertIndex: -1
       addedObject: {fileID: 552424119}
@@ -25400,7 +25451,7 @@ GameObject:
   - component: {fileID: 969985700}
   m_Layer: 7
   m_Name: Int_Apt_01_Wall_03 (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25461,7 +25512,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26199,7 +26250,7 @@ GameObject:
   - component: {fileID: 990431574}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (10)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26403,7 +26454,7 @@ GameObject:
   - component: {fileID: 998092856}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (32)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26714,7 +26765,7 @@ GameObject:
   - component: {fileID: 1034738077}
   m_Layer: 7
   m_Name: Int_WB_Pillar_4x4 (5)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26998,7 +27049,7 @@ GameObject:
   - component: {fileID: 1053961714}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (27)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27103,7 +27154,7 @@ GameObject:
   - component: {fileID: 1057853503}
   m_Layer: 7
   m_Name: Int_WB_Pillar_4x4 (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27208,7 +27259,7 @@ GameObject:
   - component: {fileID: 1060477561}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (4)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27552,7 +27603,7 @@ GameObject:
   - component: {fileID: 1070670782}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (28)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28975,6 +29026,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7347258817844829116, guid: 4ddec33f57bc4c74680f805d105aa0cc, type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29101,7 +29156,7 @@ GameObject:
   - component: {fileID: 1161206960}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_02 (3)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29474,7 +29529,7 @@ GameObject:
   - component: {fileID: 1188539053}
   m_Layer: 6
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29915,7 +29970,7 @@ GameObject:
   - component: {fileID: 1192222002}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (13)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30230,6 +30285,11 @@ MonoBehaviour:
   woodFootstepSound: {fileID: 8300000, guid: 5ee791fed51711c4f9a417d1c19b626d, type: 3}
   carpetFootstepSound: {fileID: 8300000, guid: d8523fde181439646b05bfcc51c71db1, type: 3}
   timeBetweenSteps: 0.65
+--- !u!4 &1195838048 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+  m_PrefabInstance: {fileID: 941479215}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1196827532
 GameObject:
   m_ObjectHideFlags: 0
@@ -30244,7 +30304,7 @@ GameObject:
   - component: {fileID: 1196827534}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (39)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30305,7 +30365,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -30595,7 +30655,7 @@ GameObject:
   - component: {fileID: 1209857626}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (35)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31146,7 +31206,7 @@ GameObject:
   - component: {fileID: 1240176409}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (2)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31251,7 +31311,7 @@ GameObject:
   - component: {fileID: 1240188226}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (20)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32509,7 +32569,7 @@ GameObject:
   - component: {fileID: 1304332935}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (44)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32570,7 +32630,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -34203,6 +34263,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 7347258817844829116, guid: 4ddec33f57bc4c74680f805d105aa0cc, type: 3}
+      propertyPath: m_TagString
+      value: wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34961,7 +35025,7 @@ GameObject:
   - component: {fileID: 1414297608}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_02 (5)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35066,7 +35130,7 @@ GameObject:
   - component: {fileID: 1416177080}
   m_Layer: 0
   m_Name: Closet
-  m_TagString: Untagged
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35151,7 +35215,7 @@ GameObject:
   - component: {fileID: 1417814916}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (46)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35212,7 +35276,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35672,7 +35736,7 @@ GameObject:
   - component: {fileID: 1457132342}
   m_Layer: 7
   m_Name: Int_Apt_01_Wall_03
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35842,7 +35906,7 @@ GameObject:
   - component: {fileID: 1471805486}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (14)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35947,7 +36011,7 @@ GameObject:
   - component: {fileID: 1475194353}
   m_Layer: 7
   m_Name: Int_Apt_01_Wall_04 (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36099,7 +36163,7 @@ GameObject:
   - component: {fileID: 1497548680}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_02 (2)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37405,7 +37469,7 @@ GameObject:
   - component: {fileID: 1565718151}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (7)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37823,7 +37887,7 @@ GameObject:
   - component: {fileID: 1571814532}
   m_Layer: 7
   m_Name: Int_Apt_01_Wall_03 (6)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39086,7 +39150,7 @@ GameObject:
   - component: {fileID: 1629015621}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (42)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39147,7 +39211,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -39496,7 +39560,7 @@ GameObject:
   - component: {fileID: 1650844095}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (38)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39927,7 +39991,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -40208,7 +40272,7 @@ GameObject:
   - component: {fileID: 1681884328}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (34)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40948,7 +41012,7 @@ GameObject:
   - component: {fileID: 1701021410}
   m_Layer: 0
   m_Name: Bedroom
-  m_TagString: Untagged
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41714,7 +41778,7 @@ GameObject:
   - component: {fileID: 1745753613}
   m_Layer: 0
   m_Name: ClosetDoor
-  m_TagString: Untagged
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42858,7 +42922,7 @@ GameObject:
   - component: {fileID: 1788514692}
   m_Layer: 0
   m_Name: Bathroom
-  m_TagString: Untagged
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43254,7 +43318,7 @@ GameObject:
   - component: {fileID: 1817348243}
   m_Layer: 7
   m_Name: Int_Apt_01_Wall_03 (9)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43726,7 +43790,7 @@ GameObject:
   - component: {fileID: 1844241223}
   m_Layer: 0
   m_Name: Door.001
-  m_TagString: Untagged
+  m_TagString: door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43975,7 +44039,7 @@ GameObject:
   - component: {fileID: 1851113708}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (11)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45871,7 +45935,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fb7d7a07b2942ca4cb6a6c38d807c8ea, type: 2}
+  - {fileID: 2100000, guid: 3c6b0f958be0646a9b012433d7dd0c5c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -46739,7 +46803,7 @@ GameObject:
   - component: {fileID: 1989029152}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (6)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47241,7 +47305,7 @@ GameObject:
   - component: {fileID: 2009467966}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (37)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47717,7 +47781,7 @@ GameObject:
   - component: {fileID: 2016238843}
   m_Layer: 7
   m_Name: Int_Apt_01_Wall_04 (2)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47779,7 +47843,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -48449,7 +48513,7 @@ GameObject:
   - component: {fileID: 2042540038}
   m_Layer: 7
   m_Name: Int_WB_01_Wall_01 (43)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48510,7 +48574,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -48725,7 +48789,7 @@ GameObject:
   - component: {fileID: 2058189926}
   m_Layer: 7
   m_Name: Int_WB_Pillar_4x4 (2)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50570,7 +50634,7 @@ GameObject:
   - component: {fileID: 2138682561}
   m_Layer: 7
   m_Name: Int_Apt_01_Wall_03 (8)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
