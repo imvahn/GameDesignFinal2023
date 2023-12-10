@@ -4,39 +4,56 @@ using UnityEngine;
 
 public class walldirtifier : MonoBehaviour
 {
-    public string targetTag1 = "wall"; // Replace "YourTag" with the actual tag you want to search for
+    public string t1 = "wall"; 
     public Material wallMaterial;
 
-    public string targetTag2 = "door";
+    public string t2 = "door";
     public Material doorMaterial;
 
+    public string t3 = "kitchen";
+    public Material kitchenMaterial;
 
-    void Start()
-    {
-        // Find all game objects with the specified tag
-        GameObject[] objectsInLayer = GameObject.FindGameObjectsWithTag(targetTag1);
+    //public string texturePropertyName = "_MainTex"; 
+    //public float maxTiling = 2f; // Maximum tiling factor for both X and Y
+    //public float maxOffset = 1f; // Maximum offset factor for both X and Y
 
-        // Iterate through the found game objects
-        foreach (GameObject obj in objectsInLayer)
+
+    void Start() { 
+    
+        GameObject[] wallMats = GameObject.FindGameObjectsWithTag(t1);
+        foreach (GameObject obj in wallMats)
         {
             Renderer renderer = obj.GetComponent<Renderer>();
             if (renderer != null)
             {
                 
                 renderer.material = wallMaterial;
+
+       
             }
         }
-        GameObject[] objectsInLayer2 = GameObject.FindGameObjectsWithTag(targetTag2);
-        foreach (GameObject obj in objectsInLayer2)
+
+        GameObject[] doorMats = GameObject.FindGameObjectsWithTag(t2);
+        foreach (GameObject obj in doorMats)
         {
             Renderer renderer = obj.GetComponent<Renderer>();
             if (renderer != null)
             {
-
-                print("pot");
-
                 renderer.material = doorMaterial;
+            
             }
+        }
+
+        GameObject[] kitchenTiles = GameObject.FindGameObjectsWithTag(t3);
+        foreach (GameObject obj in kitchenTiles)
+        {
+            Renderer renderer = obj.GetComponent<Renderer>();
+            renderer.material = kitchenMaterial;
+            //print("p");
+            //Vector2 randomTiling = new Vector2(Random.Range(1f, maxTiling), Random.Range(1f, maxTiling));
+            //renderer.material.SetTextureScale(texturePropertyName, randomTiling);
+            //Vector2 randomOffset = new Vector2(Random.Range(0f, maxOffset), Random.Range(0f, maxOffset));
+            //renderer.material.SetTextureOffset(texturePropertyName, randomOffset);
         }
     }
 }

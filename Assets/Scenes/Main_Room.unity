@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44944328, g: 0.49640107, b: 0.5589135, a: 1}
+  m_IndirectSpecularColor: {r: 0.44944328, g: 0.4964012, b: 0.5589136, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2576,7 +2576,7 @@ GameObject:
   - component: {fileID: 73831997}
   m_Layer: 8
   m_Name: Int_WB_01_Floor_01 (12)
-  m_TagString: Untagged
+  m_TagString: kitchen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4070,7 +4070,7 @@ GameObject:
   - component: {fileID: 124887265}
   m_Layer: 8
   m_Name: Int_WB_01_Floor_01 (14)
-  m_TagString: Untagged
+  m_TagString: kitchen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4131,7 +4131,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: 2b9463c9f77a14fd79380af3a7a0d552, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5293,12 +5293,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173498571}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 29.808, y: 5.931, z: -18.652}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1195838048}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &173498573
 MonoBehaviour:
@@ -5312,10 +5312,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e13ec04ebb22465e8dc769664aff57c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag1: wall
+  t1: wall
   wallMaterial: {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
-  targetTag2: door
+  t2: door
   doorMaterial: {fileID: 2100000, guid: 3c6b0f958be0646a9b012433d7dd0c5c, type: 2}
+  t3: kitchen
+  kitchenMaterial: {fileID: 2100000, guid: 2b9463c9f77a14fd79380af3a7a0d552, type: 2}
 --- !u!1 &173499844
 GameObject:
   m_ObjectHideFlags: 0
@@ -9755,7 +9757,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: 2b9463c9f77a14fd79380af3a7a0d552, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17627,7 +17629,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649837333}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5, y: 0, z: -7.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -17675,7 +17677,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: 2b9463c9f77a14fd79380af3a7a0d552, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18754,7 +18756,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: 2b9463c9f77a14fd79380af3a7a0d552, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19383,7 +19385,7 @@ GameObject:
   - component: {fileID: 735882587}
   m_Layer: 8
   m_Name: Int_WB_01_Floor_01 (10)
-  m_TagString: Untagged
+  m_TagString: kitchen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19444,7 +19446,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: bf1b62e637dfa43f9b5b7b288d7feb00, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19927,8 +19929,8 @@ Transform:
   m_GameObject: {fileID: 746031268}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.235, y: -0.142, z: 0.028}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 745087265}
@@ -22107,7 +22109,7 @@ GameObject:
   - component: {fileID: 826661892}
   m_Layer: 8
   m_Name: Int_WB_01_Floor_01 (15)
-  m_TagString: Untagged
+  m_TagString: kitchen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22273,7 +22275,7 @@ GameObject:
   - component: {fileID: 833799145}
   m_Layer: 8
   m_Name: Int_WB_01_Floor_01 (16)
-  m_TagString: Untagged
+  m_TagString: kitchen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22334,7 +22336,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: 2b9463c9f77a14fd79380af3a7a0d552, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -25248,9 +25250,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 173498572}
     - targetCorrespondingSourceObject: {fileID: 4459864851310106429, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       insertIndex: -1
       addedObject: {fileID: 552424119}
@@ -26960,27 +26959,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c1dfa40992958498791d50ef8810494d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c1dfa40992958498791d50ef8810494d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c1dfa40992958498791d50ef8810494d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c1dfa40992958498791d50ef8810494d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.31699944
+      value: 0.317
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c1dfa40992958498791d50ef8810494d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.03799963
+      value: -0.216
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c1dfa40992958498791d50ef8810494d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.31100085
+      value: 0.162
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c1dfa40992958498791d50ef8810494d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -27026,9 +27025,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lock
       objectReference: {fileID: 0}
+    - target: {fileID: 2710029252654688998, guid: c1dfa40992958498791d50ef8810494d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5467161389854419417, guid: c1dfa40992958498791d50ef8810494d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5467161389854419417, guid: c1dfa40992958498791d50ef8810494d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5467161389854419417, guid: c1dfa40992958498791d50ef8810494d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.8
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 7202271454713460447, guid: c1dfa40992958498791d50ef8810494d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -31247,11 +31258,6 @@ MonoBehaviour:
   woodFootstepSound: {fileID: 8300000, guid: 5ee791fed51711c4f9a417d1c19b626d, type: 3}
   carpetFootstepSound: {fileID: 8300000, guid: d8523fde181439646b05bfcc51c71db1, type: 3}
   timeBetweenSteps: 0.65
---- !u!4 &1195838048 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
-  m_PrefabInstance: {fileID: 941479215}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1196827532
 GameObject:
   m_ObjectHideFlags: 0
@@ -32104,7 +32110,7 @@ GameObject:
   - component: {fileID: 1219507812}
   m_Layer: 8
   m_Name: Int_WB_01_Floor_01 (11)
-  m_TagString: Untagged
+  m_TagString: kitchen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32165,7 +32171,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: 2b9463c9f77a14fd79380af3a7a0d552, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -35366,6 +35372,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 738106999}
     m_Modifications:
+    - target: {fileID: 7347258817842627966, guid: 4ddec33f57bc4c74680f805d105aa0cc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8e5d7111ed2d4414580190da0f5fbe70, type: 2}
     - target: {fileID: 7347258817844397980, guid: 4ddec33f57bc4c74680f805d105aa0cc, type: 3}
       propertyPath: m_RootOrder
       value: 35
@@ -46911,7 +46921,7 @@ GameObject:
   - component: {fileID: 1896470786}
   m_Layer: 8
   m_Name: Int_WB_01_Floor_01 (13)
-  m_TagString: Untagged
+  m_TagString: kitchen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46972,7 +46982,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5edd18648b6fe340941b7f67c9a2996, type: 2}
+  - {fileID: 2100000, guid: 2b9463c9f77a14fd79380af3a7a0d552, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -52946,3 +52956,4 @@ SceneRoots:
   - {fileID: 212050528}
   - {fileID: 2059192014}
   - {fileID: 319333125}
+  - {fileID: 173498572}

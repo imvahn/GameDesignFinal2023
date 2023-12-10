@@ -9,6 +9,7 @@ TagManager:
   - Remote
   - wall
   - door
+  - kitchen
   layers:
   - Default
   - TransparentFX
