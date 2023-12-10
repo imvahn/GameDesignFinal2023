@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FinalSong : MonoBehaviour
+public class FinalSong : MonoBehaviour, IInteractable
 {
     public GameObject UI;
     public FirstPersonController playerMovement;

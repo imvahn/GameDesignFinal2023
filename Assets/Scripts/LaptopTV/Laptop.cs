@@ -22,6 +22,7 @@ public class Laptop : MonoBehaviour, IInteractable
     void Start()
     {
         isLoggedIn = false;
+        GlobalVariables.inTypeUI = false;
         
         if (laptopUI != null)
         {
@@ -61,10 +62,12 @@ public class Laptop : MonoBehaviour, IInteractable
             if (laptopUI.activeSelf) //open laptop
             {
                 playerMovement?.FreezeMovement(); //stop player movement
+                GlobalVariables.inTypeUI = true; // Player is in the typing UI
                 Cursor.visible = true; // Make the cursor visible
                 Cursor.lockState = CursorLockMode.None; // Unlock cursor
                 if (isLoggedIn)
                 {
+                    GlobalVariables.inTypeUI = false; // Player is no longer in the typing UI
                     email.SetActive(true); //show email UI if already logged in
                 }
                 else

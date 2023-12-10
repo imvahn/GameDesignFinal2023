@@ -57,9 +57,12 @@ public class InteractorScript : MonoBehaviour
                 hitSomething = true;
 
                 interactionText.text = interactable.GetDescription(); // Calls GetDescription function on given object
-                if (Input.GetKeyDown(KeyCode.E))
+                if (!GlobalVariables.inTypeUI) // Determines if player is in a UI that involves typing
                 {
-                    interactable.Interact(); // Calls interact function on given object
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        interactable.Interact(); // Calls interact function on given object
+                    }
                 }
             }
         }
