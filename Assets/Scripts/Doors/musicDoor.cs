@@ -12,7 +12,7 @@ namespace SojaExiles
 		private Transform playerTransform;
 
 		public bool open;
-		public bool isLocked = false;
+		public bool isLocked;
 
 		public AudioClip openDoor;
 		public AudioClip closeDoor;
@@ -22,6 +22,7 @@ namespace SojaExiles
 		void Start()
 		{
 			open = false;
+			isLocked = true;
 			GlobalVariables.musicRoomLocked = true;
 			audioSource = GetComponent<AudioSource>();
 		}
