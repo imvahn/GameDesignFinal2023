@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using SojaExiles;
 using UnityEngine;
 
-public class LookWithMouse : MonoBehaviour, IInteractable
+public class Keypad : MonoBehaviour, IInteractable
 {
     public GameObject UI;
     public FirstPersonController playerMovement;

@@ -21,7 +21,7 @@ public class Pickup : MonoBehaviour
     void Start()
     {
         pickupRange = 5.0f;
-        pickupForce = 50.0f;
+        pickupForce = 25.0f;
         heldObjRB = GetComponent<Rigidbody>();
         isHolding = false;
         GlobalVariables.remoteHeld = false;

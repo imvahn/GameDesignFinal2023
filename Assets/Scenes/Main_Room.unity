@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44944346, g: 0.49640143, b: 0.558914, a: 1}
+  m_IndirectSpecularColor: {r: 0.44944328, g: 0.49640107, b: 0.5589135, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3195,7 +3195,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: BbMaj7
+          m_StringArgument: Bb
           m_BoolArgument: 0
         m_CallState: 2
   m_OnSubmit:
@@ -12093,7 +12093,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: AMaj7
+          m_StringArgument: A
           m_BoolArgument: 0
         m_CallState: 2
   m_OnSubmit:
@@ -13728,7 +13728,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 941479217}
@@ -17828,7 +17828,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5705457084256969370, guid: 2769230628fbb4a6a8f099875f38a907, type: 3}
   m_PrefabInstance: {fileID: 2003290742}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &766076088
+--- !u!114 &766076092
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -17837,7 +17837,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 766076086}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 750b4ba807af23d449a99cfaf83a9f35, type: 3}
+  m_Script: {fileID: 11500000, guid: 2ac4f4bbb09906140ad97e0f53331d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   UI: {fileID: 886758049}
@@ -21039,7 +21039,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   pickupRange: 5
-  pickupForce: 50
+  pickupForce: 25
   TVLayerMask:
     serializedVersion: 2
     m_Bits: 1024
@@ -26319,6 +26319,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 34958593}
     m_Modifications:
+    - target: {fileID: 1487849527591374079, guid: 2769230628fbb4a6a8f099875f38a907, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 698ce22b2e16bf2419790fc29a51b0ed, type: 2}
     - target: {fileID: 2473656886259508749, guid: 2769230628fbb4a6a8f099875f38a907, type: 3}
       propertyPath: manuscriptUI
       value: 
@@ -26399,14 +26403,10 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 1.1374474
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2473656886259508749, guid: 2769230628fbb4a6a8f099875f38a907, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5247895979142134779, guid: 2769230628fbb4a6a8f099875f38a907, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2136562689}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2769230628fbb4a6a8f099875f38a907, type: 3}
 --- !u!4 &1158486378 stripped
 Transform:
@@ -37324,6 +37324,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 852248580}
     m_Modifications:
+    - target: {fileID: 1670239236134435323, guid: c2903d9007db8b5478e030e7a16c2d31, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208572549722545641, guid: c2903d9007db8b5478e030e7a16c2d31, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3502763693518168086, guid: c2903d9007db8b5478e030e7a16c2d31, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3733352150801858236, guid: c2903d9007db8b5478e030e7a16c2d31, type: 3}
       propertyPath: m_Name
       value: Lyrics UI
@@ -37410,6 +37422,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5955643508046239942, guid: c2903d9007db8b5478e030e7a16c2d31, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8846647116117625888, guid: c2903d9007db8b5478e030e7a16c2d31, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -38971,7 +38987,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: GMaj7
+          m_StringArgument: G
           m_BoolArgument: 0
         m_CallState: 2
   m_OnSubmit:
@@ -42137,7 +42153,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FMaj7
+          m_StringArgument: F
           m_BoolArgument: 0
         m_CallState: 2
   m_OnSubmit:
@@ -42461,7 +42477,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5247895979142134779, guid: 2769230628fbb4a6a8f099875f38a907, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 766076088}
+      addedObject: {fileID: 766076092}
   m_SourcePrefab: {fileID: 100100000, guid: 2769230628fbb4a6a8f099875f38a907, type: 3}
 --- !u!1001 &2006633784
 PrefabInstance:
@@ -42482,7 +42498,7 @@ PrefabInstance:
     - target: {fileID: 6725016632513255140, guid: 1de21e561cd51a847848f19975f60af7, type: 3}
       propertyPath: musicRoomDoor
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 34958601}
     - target: {fileID: 7362560064258419821, guid: 1de21e561cd51a847848f19975f60af7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -45720,30 +45736,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1697057537660996819, guid: 70c062c3a7500e7479c9797b6190948e, type: 3}
   m_PrefabInstance: {fileID: 2134879743}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2136562683 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5247895979142134779, guid: 2769230628fbb4a6a8f099875f38a907, type: 3}
-  m_PrefabInstance: {fileID: 1158478461}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2136562688 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5705457084256969370, guid: 2769230628fbb4a6a8f099875f38a907, type: 3}
   m_PrefabInstance: {fileID: 1158478461}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2136562689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2136562683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 750b4ba807af23d449a99cfaf83a9f35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UI: {fileID: 506133309}
-  playerMovement: {fileID: 1195838044}
 --- !u!1 &2138682559
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class KeypadUI : MonoBehaviour
     string code = "1824";
     string input = null;
     public TMP_Text output = null;
-    public opencloseDoor musicRoomDoor;
+    public musicDoor musicRoomDoor;
 
     private void Start()
     {
