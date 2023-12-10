@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44944346, g: 0.49640143, b: 0.558914, a: 1}
+  m_IndirectSpecularColor: {r: 0.44944328, g: 0.4964012, b: 0.5589136, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2200,7 +2200,7 @@ GameObject:
   - component: {fileID: 61886300}
   - component: {fileID: 61886299}
   - component: {fileID: 61886298}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ClosetDoor_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24672,7 +24672,7 @@ GameObject:
   - component: {fileID: 926095453}
   - component: {fileID: 926095455}
   - component: {fileID: 926095454}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Music Room
   m_TagString: door
   m_Icon: {fileID: 0}
@@ -25080,7 +25080,7 @@ GameObject:
   - component: {fileID: 938565006}
   - component: {fileID: 938565008}
   - component: {fileID: 938565007}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Entrance Door
   m_TagString: door
   m_Icon: {fileID: 0}
@@ -34027,7 +34027,7 @@ GameObject:
   - component: {fileID: 1337812616}
   - component: {fileID: 1337812618}
   - component: {fileID: 1337812617}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36359,7 +36359,7 @@ GameObject:
   - component: {fileID: 1416177079}
   - component: {fileID: 1416177081}
   - component: {fileID: 1416177080}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Closet
   m_TagString: door
   m_Icon: {fileID: 0}
@@ -42629,7 +42629,7 @@ GameObject:
   - component: {fileID: 1701021409}
   - component: {fileID: 1701021411}
   - component: {fileID: 1701021410}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bedroom
   m_TagString: door
   m_Icon: {fileID: 0}
@@ -43395,7 +43395,7 @@ GameObject:
   - component: {fileID: 1745753608}
   - component: {fileID: 1745753614}
   - component: {fileID: 1745753613}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ClosetDoor
   m_TagString: door
   m_Icon: {fileID: 0}
@@ -44615,7 +44615,7 @@ GameObject:
   - component: {fileID: 1788514691}
   - component: {fileID: 1788514693}
   - component: {fileID: 1788514692}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bathroom
   m_TagString: door
   m_Icon: {fileID: 0}
@@ -45519,7 +45519,7 @@ GameObject:
   - component: {fileID: 1844241225}
   - component: {fileID: 1844241224}
   - component: {fileID: 1844241223}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door.001
   m_TagString: door
   m_Icon: {fileID: 0}
@@ -47001,7 +47001,7 @@ GameObject:
   - component: {fileID: 1906723466}
   - component: {fileID: 1906723468}
   - component: {fileID: 1906723467}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Handle_Door.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
