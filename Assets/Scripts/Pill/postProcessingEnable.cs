@@ -342,9 +342,9 @@ public class postProcessingEnable : MonoBehaviour
         m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, m_lensDistortion);
     }
 
-    void OnDestroy()
-    {
-        RuntimeUtilities.DestroyVolume(m_Volume, true, true);
-    }
+    //void OnDestroy()
+    //{
+    //    RuntimeUtilities.DestroyVolume(m_Volume, true, true);
+    //}
 }
 

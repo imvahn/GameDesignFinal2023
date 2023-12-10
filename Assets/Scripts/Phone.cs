@@ -27,10 +27,10 @@ public class Phone : MonoBehaviour, IInteractable // Must add the IInteractable 
         // Adding text lines manually
         linesOfText = new string[]
         {
-        "Girlfriend: You stupid ugly loser",
+        "Girlfriend: I'm really disappointed in you",
         "\n",
         "\n",
-        "Girlfriend: You need to get your shit together. Your apartment is a mess. You haven't done any work in weeks. You used to be such a great musician.",
+        "Girlfriend: You need to get your life together. Your apartment is a mess. You haven't done any work in weeks. You used to be such a great musician.",
         "\n",
         "\n",
         "Girlfriend: You need to complete the song you've been working on or we're through. And clean your apartment while you're at it!!",
@@ -98,7 +98,7 @@ public class Phone : MonoBehaviour, IInteractable // Must add the IInteractable 
             foreach (char letter in linesOfText[i].ToCharArray())
             {
                 textDisplay.text += letter;
-                yield return new WaitForSeconds(0.07f); // Adjust the speed of typing
+                yield return new WaitForSeconds(0.03f); // Adjust the speed of typing
             }
         }
 
