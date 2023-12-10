@@ -13,6 +13,7 @@ public class FinalSongInput : MonoBehaviour
     private void Start()
     {
         isCorrect = false;
+        chordInput = GetComponent<TMP_InputField>();
     }
 
     public void CheckChord(string correctChord)
