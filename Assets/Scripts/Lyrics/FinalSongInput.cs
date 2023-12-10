@@ -9,10 +9,15 @@ public class FinalSongInput : MonoBehaviour
     
     TMP_InputField chordInput;
     public bool isCorrect;
-    
+
+    private void Start()
+    {
+        isCorrect = false;
+    }
+
     public void CheckChord(string correctChord)
     {
-        if(chordInput.text == correctChord)
+        if (chordInput.text == correctChord)
         {
             isCorrect = true;
         }
