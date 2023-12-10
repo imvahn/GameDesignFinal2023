@@ -23,8 +23,8 @@ public class PauseMenu : MonoBehaviour
         // Check for pause button input (e.g., "P" key)
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (!phone.IsTyping()) // Pause menu can only be activated if the text isn't typing.
-            {
+            //if (!phone.IsTyping()) // Pause menu can only be activated if the text isn't typing.
+            //{
                 if (isPaused)
                 {
                     ResumeGame();
@@ -33,7 +33,7 @@ public class PauseMenu : MonoBehaviour
                 {
                     PauseGame();
                 }
-            }
+            //}
         }
     }
 
