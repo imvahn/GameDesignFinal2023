@@ -12,6 +12,7 @@ public class LookWithMouse : MonoBehaviour, IInteractable
     {
         UI.SetActive(false);
     }
+
     public void Interact()
     {
         if (UI != null)
