@@ -39,7 +39,7 @@ public class Laptop : MonoBehaviour, IInteractable
     public void LogIn()
     {
         string password = inputField.text;
-        if (password == "dgbcg")
+        if (password == "dgbcg" || password == "DGBCG")
         {
             isLoggedIn = true;
             email.SetActive(true);
