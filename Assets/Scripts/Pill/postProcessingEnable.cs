@@ -65,13 +65,6 @@ public class postProcessingEnable : MonoBehaviour
         if (spooky)
         {
 
-
-            tint = Mathf.Cos(Time.time) * amplitude;
-            temp = Mathf.Sin(Time.time) * amplitude;
-            m_ColorGrading.tint.Override(tint);
-            m_ColorGrading.temperature.Override(temp);
-            //print("temp: " + temp);
-
             T = Time.time;
             tint = Mathf.Cos(2.5f * T) * amplitude;
             temp = Mathf.Sin(2.5f * T) * amplitude;
@@ -189,10 +182,27 @@ public class postProcessingEnable : MonoBehaviour
         m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, m_lensDistortion);
     }
 
-    public void turnSpookyOff()
+    public void turnOffLensDistortion()
     {
-        spooky = false;
+        m_lensDistortion = ScriptableObject.CreateInstance<LensDistortion>();
+        m_lensDistortion.enabled.Override(true);
+        m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, m_lensDistortion);
+        lensIntensity = 1;
+        m_lensDistortion.intensity.Override(lensIntensity);
     }
+
+    public void turnOffColorGrading()
+    {
+        m_ColorGrading = ScriptableObject.CreateInstance<ColorGrading>();
+        m_ColorGrading.enabled.Override(true);
+        m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, m_ColorGrading);
+        m_ColorGrading.tint.Override(0f);
+        m_ColorGrading.temperature.Override(0f);
+
+    }
+
+
+
 
     //void OnDestroy()
     //{
