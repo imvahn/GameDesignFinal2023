@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44944328, g: 0.4964012, b: 0.5589136, a: 1}
+  m_IndirectSpecularColor: {r: 0.44944328, g: 0.49640107, b: 0.5589135, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16924,7 +16924,6 @@ GameObject:
   - component: {fileID: 624507934}
   - component: {fileID: 624507936}
   - component: {fileID: 624507935}
-  - component: {fileID: 624507937}
   m_Layer: 5
   m_Name: Win
   m_TagString: Untagged
@@ -16939,16 +16938,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624507933}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 852248580}
+  m_Father: {fileID: 886758050}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: -2}
+  m_AnchoredPosition: {x: -6.1519938, y: 238.99997}
   m_SizeDelta: {x: 561.85, y: 132.819}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &624507935
@@ -17048,22 +17047,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 624507933}
   m_CullTransparentMesh: 1
---- !u!114 &624507937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 624507933}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aba3dc779bce6b84cbcb3068bdd81339, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GMaj7: {fileID: 1812145215}
-  BbMaj7: {fileID: 112972586}
-  AMaj7: {fileID: 493654286}
-  FMaj7: {fileID: 1988149191}
 --- !u!1001 &629835055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23034,7 +23017,6 @@ RectTransform:
   - {fileID: 2006633785}
   - {fileID: 506133310}
   - {fileID: 886758050}
-  - {fileID: 624507934}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -23635,6 +23617,7 @@ GameObject:
   - component: {fileID: 886758050}
   - component: {fileID: 886758052}
   - component: {fileID: 886758051}
+  - component: {fileID: 886758053}
   m_Layer: 5
   m_Name: FinalSongUI
   m_TagString: Untagged
@@ -23658,6 +23641,7 @@ RectTransform:
   - {fileID: 112972584}
   - {fileID: 493654284}
   - {fileID: 1988149189}
+  - {fileID: 624507934}
   m_Father: {fileID: 852248580}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -23703,6 +23687,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 886758049}
   m_CullTransparentMesh: 1
+--- !u!114 &886758053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886758049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aba3dc779bce6b84cbcb3068bdd81339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WinUI: {fileID: 624507933}
+  GMaj7: {fileID: 1812145215}
+  BbMaj7: {fileID: 112972586}
+  AMaj7: {fileID: 493654286}
+  FMaj7: {fileID: 1988149191}
 --- !u!1 &894081086
 GameObject:
   m_ObjectHideFlags: 0
