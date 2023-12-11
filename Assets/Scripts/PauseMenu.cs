@@ -36,7 +36,7 @@ public class PauseMenu : MonoBehaviour
             }
             else
             {
-                GlobalVariables.inTypeUI = false;
+                GlobalVariables.inTypeUI = false; // Player is out of the typing UI
             }
         }
     }

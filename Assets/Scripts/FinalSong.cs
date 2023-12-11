@@ -6,6 +6,7 @@ public class FinalSong : MonoBehaviour, IInteractable
 {
     public GameObject UI;
     public FirstPersonController playerMovement;
+    public string description;
 
     private void Start()
     {
@@ -23,6 +24,7 @@ public class FinalSong : MonoBehaviour, IInteractable
             if (UI.activeSelf)
             {
                 playerMovement?.FreezeMovement(); //stop player movement
+                GlobalVariables.inTypeUI = true; // Player is in the typing UI
                 Cursor.visible = true; // Make the cursor visible
                 Cursor.lockState = CursorLockMode.None; // Unlock cursor
             }
@@ -36,6 +38,6 @@ public class FinalSong : MonoBehaviour, IInteractable
 
     public string GetDescription()
     {
-        return "Write music";
+        return description;
     }
 }
