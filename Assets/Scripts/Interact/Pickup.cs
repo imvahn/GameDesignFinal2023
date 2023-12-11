@@ -69,6 +69,12 @@ public class Pickup : MonoBehaviour
     // Function to put down the object
     public void DropObject()
     {
+        // TV functionality, remote not held and E shown
+        if (heldObj.name == "Remote")
+        {
+            GlobalVariables.remoteHeld = false;
+        }
+
         heldObjRB.useGravity = true;
         heldObjRB.drag = 1;
         heldObjRB.constraints = RigidbodyConstraints.None;
