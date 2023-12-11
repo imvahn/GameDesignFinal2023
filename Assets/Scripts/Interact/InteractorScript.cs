@@ -64,6 +64,13 @@ public class InteractorScript : MonoBehaviour
                         interactable.Interact(); // Calls interact function on given object
                     }
                 }
+                else
+                {
+                    if (Input.GetKeyDown(KeyCode.Escape))
+                    {
+                        interactable.Interact();
+                    }
+                }
             }
         }
 
