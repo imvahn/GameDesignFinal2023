@@ -20,7 +20,7 @@ public class postProcessingEnable : MonoBehaviour
     AmbientOcclusion m_ambient;
     LensDistortion m_lensDistortion;
 
-    bool spooky = false;
+    bool spooky;
     float T;
     float temp;
     float tint;
@@ -41,7 +41,7 @@ public class postProcessingEnable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        spooky = false;
         //TurnOnInspiration();
 
     }
@@ -94,6 +94,7 @@ public class postProcessingEnable : MonoBehaviour
             
         }
     }
+
     public void TurnOnInspiration()
     {
 
@@ -106,10 +107,6 @@ public class postProcessingEnable : MonoBehaviour
         turnOnAmbientOcc();
         turnOnLensDistortion();
     }
-
-    
-
-
 
     public void turnOnBloom()
 
@@ -190,6 +187,11 @@ public class postProcessingEnable : MonoBehaviour
         m_lensDistortion = ScriptableObject.CreateInstance<LensDistortion>();
         m_lensDistortion.enabled.Override(true);
         m_Volume = PostProcessManager.instance.QuickVolume(gameObject.layer, 100f, m_lensDistortion);
+    }
+
+    public void turnSpookyOff()
+    {
+        spooky = false;
     }
 
     //void OnDestroy()

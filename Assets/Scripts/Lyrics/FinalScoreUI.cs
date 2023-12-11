@@ -24,12 +24,14 @@ public class FinalScoreUI : MonoBehaviour
         if (GMaj7.isCorrect && BbMaj7.isCorrect && AMaj7.isCorrect && FMaj7.isCorrect)
         {
             WinUI.SetActive(true);
+
         }
     }
 
     public void MainMenu()
     {
         SceneManager.LoadSceneAsync(0);
+        
     }
 
 
