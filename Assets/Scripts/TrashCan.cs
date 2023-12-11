@@ -29,7 +29,7 @@ public class TrashCan : MonoBehaviour
             }
         }
 
-        if (itemCount == 6)
+        if (itemCount == 3)
         {
             trashIsFull = true;
         }
