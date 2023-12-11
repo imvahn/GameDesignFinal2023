@@ -19,6 +19,8 @@ public class Phone : MonoBehaviour, IInteractable // Must add the IInteractable 
     public FirstPersonController playerMovement; // Reference to controller to freeze player movement while reading the texts. This is because the player needs to be looking
                                                  // at the object to start/end the interaction, and this was the easiest solution.
 
+    public GameObject tutorial; //tutorial ui
+
     private void Start()
     {
         isTyping = false;
@@ -45,6 +47,10 @@ public class Phone : MonoBehaviour, IInteractable // Must add the IInteractable 
         {
             phoneUI.SetActive(false);
         }
+        if (tutorial != null)
+        {
+            tutorial.SetActive(true);
+        }
     }
 
     public void Interact()
@@ -62,6 +68,8 @@ public class Phone : MonoBehaviour, IInteractable // Must add the IInteractable 
 
             if (phoneUI.activeSelf)
             {
+
+                tutorial.SetActive(false);
                 isInteracting = true; // Set flag to true to prevent new interactions
 
                 if (!hasDisplayedOnce) // If text has not been displayed yet, start typing
