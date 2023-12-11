@@ -42,7 +42,7 @@ public class postProcessingEnable : MonoBehaviour
     void Start()
     {
 
-        TurnOnInspiration();
+        //TurnOnInspiration();
 
     }
 
@@ -90,17 +90,8 @@ public class postProcessingEnable : MonoBehaviour
             m_Grain.size.Override(grainIS);
 
             lensIntensity = Mathf.Abs(Mathf.Cos(T)) * lensIntensityAmplitude;
-            //print(lensIntensity);
-            //lensX = Mathf.Abs(Mathf.Sin(T));
-            //lensY = Mathf.Abs(Mathf.Cos(T));
-            //print("int: " + lensIntens    ity + ", X: " + lensX + ", Y :" + lensY);
-
             m_lensDistortion.intensity.Override(lensIntensity);
-            //m_lensDistortion.centerX.Override(lensX);
-            //m_lensDistortion.centerY.Override(lensY);
-            //print("temp: " + temp);\
-
-            //print("tint: " + tint);
+            
         }
     }
     public void TurnOnInspiration()
