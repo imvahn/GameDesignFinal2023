@@ -44,6 +44,7 @@ public class Laptop : MonoBehaviour, IInteractable
             isLoggedIn = true;
             email.SetActive(true);
             screen.ChangeMaterial(emailScreen);
+            GlobalVariables.inTypeUI = false; // Player is no longer in the typing UI
         }
         else
         {
