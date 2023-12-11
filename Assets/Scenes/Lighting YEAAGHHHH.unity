@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 40fa5696077438a49bbce1aac01eba84, type: 2}
   m_HaloStrength: 0.603
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44944346, g: 0.49640143, b: 0.558914, a: 1}
+  m_IndirectSpecularColor: {r: 0.86033136, g: 0.77858585, b: 0.65487266, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4819,10 +4819,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e13ec04ebb22465e8dc769664aff57c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag1: wall
+  t1: wall
   wallMaterial: {fileID: 2100000, guid: d996b7abc6556453da74ba0f33e0649f, type: 2}
-  targetTag2: door
+  t2: door
   doorMaterial: {fileID: 2100000, guid: 3c6b0f958be0646a9b012433d7dd0c5c, type: 2}
+  t3: kitchen
+  kitchenMaterial: {fileID: 0}
 --- !u!1 &173499844
 GameObject:
   m_ObjectHideFlags: 0
@@ -5777,6 +5779,7 @@ MonoBehaviour:
   linesOfText: []
   hasDisplayedOnce: 0
   playerMovement: {fileID: 1195838044}
+  tutorial: {fileID: 0}
 --- !u!1001 &240576512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15170,6 +15173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aba3dc779bce6b84cbcb3068bdd81339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WinUI: {fileID: 0}
   GMaj7: {fileID: 1812145215}
   BbMaj7: {fileID: 112972586}
   AMaj7: {fileID: 493654286}
@@ -18230,6 +18234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI: {fileID: 886758049}
   playerMovement: {fileID: 1195838044}
+  description: 
 --- !u!1 &767645697
 GameObject:
   m_ObjectHideFlags: 0
@@ -22904,6 +22909,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4459864851310106424, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       insertIndex: -1
       addedObject: {fileID: 941479226}
+    - targetCorrespondingSourceObject: {fileID: 4459864851310106424, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 941479227}
   m_SourcePrefab: {fileID: 100100000, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
 --- !u!1 &941479216 stripped
 GameObject:
@@ -23009,6 +23017,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14efdb1cf85f940e495a154fefffbe6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!45 &941479227
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905391840}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: 40fa5696077438a49bbce1aac01eba84, type: 2}
 --- !u!1 &944653060
 GameObject:
   m_ObjectHideFlags: 0

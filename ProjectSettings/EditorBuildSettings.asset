@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Imported Assets/LowPolyProps/StartMenu.unity
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
     guid: 1704f5ee6bf184e14bc0308a978ce568
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Main_Room.unity
     guid: 9b5aa6428ba7a6246bd201ba8d95cebe
   - enabled: 0
@@ -17,7 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/PauseTesting.unity
     guid: d7c75f01cf56745aa86b657159e960f7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Lighting YEAAGHHHH.unity
     guid: c347662cd6299430bbb84ae5de61ba0c
   m_configObjects: {}
