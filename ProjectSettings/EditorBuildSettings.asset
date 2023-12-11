@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/PauseTesting.unity
     guid: d7c75f01cf56745aa86b657159e960f7
+  - enabled: 0
+    path: Assets/Scenes/Lighting YEAAGHHHH.unity
+    guid: c347662cd6299430bbb84ae5de61ba0c
   m_configObjects: {}
