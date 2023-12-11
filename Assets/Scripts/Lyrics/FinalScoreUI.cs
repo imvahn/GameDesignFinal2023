@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FinalScoreUI : MonoBehaviour
 {
@@ -24,6 +25,11 @@ public class FinalScoreUI : MonoBehaviour
         {
             WinUI.SetActive(true);
         }
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadSceneAsync(0);
     }
 
 
